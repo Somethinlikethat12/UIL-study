@@ -75,6 +75,303 @@ const Q=[
 ['Scientific Skills','Advanced','A measured value is 48.0 and the accepted value is 50.0. What is the percent error?',['2.0%','4.0%','4.2%','96.0%'],1,'Percent error = |48.0−50.0|/50.0 × 100% = 4.0%.']
 ];
 
+
+/* Official 2026-27 UIL director-note topic coverage. Five original questions
+   per listed topic; levels progress from Foundation to Advanced. */
+function addTopic(subject,topic,items){
+ for(const x of items) Q.push([subject,x[0],topic+" — "+x[1],x[2],x[3],x[4],topic]);
+}
+const F="Foundation", I="Intermediate", A="Advanced";
+const bioTopics=[
+["Structure & Function",[
+[F,"Which feature of a phospholipid makes it suitable for forming a cell membrane?",["A hydrophilic head and hydrophobic tails","Four identical sugar rings","A fully nonpolar structure","A chain of amino acids"],0,"Phospholipids are amphipathic: polar heads interact with water while nonpolar tails face inward."],
+[F,"Which organelle modifies and packages many proteins for transport?",["Golgi apparatus","Nucleolus","Lysosome","Centriole"],0,"The Golgi apparatus modifies, sorts, and packages proteins and lipids."],
+[I,"A cell placed in a hypertonic solution will generally:",["Lose water by osmosis","Gain water by osmosis","Have no net water movement","Actively pump water inward"],0,"Water moves toward the region of higher solute concentration; the cell loses water."],
+[I,"Which macromolecule is built from amino acid monomers?",["Protein","Nucleic acid","Polysaccharide","Triglyceride"],0,"Proteins are polymers of amino acids linked by peptide bonds."],
+[A,"A membrane protein transports glucose down its concentration gradient without ATP. This is:",["Facilitated diffusion","Active transport","Endocytosis","Exocytosis"],0,"Facilitated diffusion uses a membrane protein but moves substances down their gradient without direct energy input."]
+]],
+["Cellular & Acellular Replication",[
+[F,"During which phase of the cell cycle is DNA replicated?",["S phase","G₁ phase","G₂ phase","M phase"],0,"DNA synthesis occurs during the S phase of interphase."],
+[F,"How many daughter cells usually result from one mitotic division?",["Two","One","Four","Eight"],0,"Mitosis followed by cytokinesis generally produces two daughter cells."],
+[I,"Crossing over normally occurs during:",["Prophase I of meiosis","Metaphase of mitosis","Telophase II","S phase"],0,"Homologous chromosomes exchange segments during prophase I."],
+[I,"Which structure is present in viruses but absent from all cellular organisms?",["A capsid surrounding genetic material","A plasma membrane","Nucleic acid","Proteins"],0,"Viruses characteristically package their genome in a protein capsid; cellular organisms have many other structures."],
+[A,"A diploid cell has 2n=12 chromosomes. How many chromosomes are in each normal haploid gamete?",["6","12","24","3"],0,"Haploid cells have half the diploid chromosome number: n=6."]
+]],
+["Energy Transformations",[
+[F,"Which molecule is the immediate, widely used energy currency of cells?",["ATP","DNA","Cellulose","Cholesterol"],0,"ATP hydrolysis can power many cellular processes."],
+[F,"Where do the light-dependent reactions of photosynthesis occur?",["Thylakoid membranes","Mitochondrial matrix","Cytoplasm","Nuclear envelope"],0,"Photosystems and electron transport components are embedded in thylakoid membranes."],
+[I,"The net products of glycolysis from one glucose molecule include:",["Two pyruvate, two net ATP, and NADH","Six CO₂ and six O₂","One acetyl-CoA only","Two lactate in all organisms"],0,"Glycolysis produces two pyruvate, two net ATP, and two NADH per glucose."],
+[I,"What is the main role of an enzyme in a reaction?",["Lower activation energy","Increase the reaction's ΔG","Change the equilibrium constant","Become a permanent product"],0,"Enzymes lower activation energy and speed the approach to equilibrium."],
+[A,"If oxygen is unavailable to an animal cell, which process can regenerate NAD⁺ so glycolysis continues?",["Lactic acid fermentation","The Calvin cycle","Oxidative phosphorylation","The Krebs cycle at its normal rate"],0,"Fermentation oxidizes NADH to NAD⁺, allowing glycolysis to continue."]
+]],
+["Gene Expression",[
+[F,"Which enzyme synthesizes RNA from a DNA template?",["RNA polymerase","DNA ligase","Helicase","DNA polymerase"],0,"RNA polymerase carries out transcription."],
+[F,"During translation, a ribosome reads:",["mRNA codons","DNA promoters","Lipid tails","Anticodons on DNA"],0,"Ribosomes read mRNA codons to assemble amino acids."],
+[I,"A three-nucleotide sequence on mRNA is called a:",["Codon","Gene","Centromere","Intron"],0,"Each codon specifies an amino acid or a translation stop signal."],
+[I,"What is the usual effect of removing introns from a eukaryotic pre-mRNA?",["It produces mature mRNA for export and translation","It duplicates the chromosome","It converts RNA into DNA","It prevents all gene expression"],0,"RNA splicing removes introns and joins exons."],
+[A,"A single-base substitution changes a codon but not the encoded amino acid. This is a:",["Silent mutation","Frameshift mutation","Nonsense mutation","Chromosomal deletion"],0,"The genetic code is redundant, so some substitutions do not change the amino acid."]
+]],
+["Genetics & Inheritance",[
+[F,"An organism with genotype Aa is described as:",["Heterozygous","Homozygous dominant","Homozygous recessive","Hemizygous"],0,"Heterozygous means the two alleles at a locus differ."],
+[F,"For a heterozygous monohybrid cross Aa × Aa, what is the expected genotype ratio?",["1:2:1","3:1","9:3:3:1","1:1"],0,"The genotypes are AA, Aa, Aa, and aa."],
+[I,"A trait controlled by many genes is described as:",["Polygenic","Codominant only","Sex-linked only","A single-gene trait"],0,"Polygenic traits result from contributions of multiple genes."],
+[I,"In incomplete dominance, a heterozygote often displays:",["An intermediate phenotype","Only the dominant phenotype","Both traits fully and separately","No phenotype"],0,"The heterozygote phenotype is intermediate between the two homozygotes."],
+[A,"A carrier mother for an X-linked recessive trait and an unaffected noncarrier father have what probability of an affected son?",["50% of sons","100% of sons","25% of sons","0% of sons"],0,"A son receives his X chromosome from his mother; half of her eggs carry the recessive allele."]
+]],
+["Evolution",[
+[F,"Evolution by natural selection requires:",["Heritable variation and differential reproductive success","Identical individuals","Traits acquired during life being inherited automatically","No competition or environmental differences"],0,"Selection acts on heritable variation when variants differ in reproductive success."],
+[F,"A population's allele frequencies changing over generations is:",["Microevolution","Homeostasis","Succession","Mitosis"],0,"Microevolution is change in allele frequencies within a population."],
+[I,"Random changes in allele frequencies are especially strong in small populations through:",["Genetic drift","Gene flow","Stabilizing selection","Artificial selection"],0,"Sampling effects can cause large allele-frequency shifts in small populations."],
+[I,"The movement of alleles between populations is called:",["Gene flow","Genetic drift","Mutation pressure","Assortative mating"],0,"Migration of individuals or gametes can transfer alleles between populations."],
+[A,"Two populations become reproductively isolated and diverge over time. This can lead to:",["Speciation","Convergent weathering","Homeostasis","Binary fission"],0,"Reproductive isolation can allow independent evolutionary divergence and speciation."]
+]],
+["Origin & Diversity of Life",[
+[F,"Which domain contains organisms with nuclei and membrane-bound organelles?",["Eukarya","Bacteria","Archaea","Viruses"],0,"Eukaryotes have cells with a membrane-bound nucleus."],
+[F,"A scientific name such as Homo sapiens uses which naming system?",["Binomial nomenclature","Natural selection","Dichotomous inheritance","Linnaean physiology"],0,"Binomial nomenclature gives genus followed by specific epithet."],
+[I,"In a phylogenetic tree, organisms sharing a more recent common ancestor are generally:",["More closely related","Always identical","From different domains","Unrelated"],0,"A more recent shared common ancestor indicates closer evolutionary relationship."],
+[I,"Which sequence goes from broadest to most specific taxonomic rank?",["Domain, kingdom, phylum, class","Species, genus, family, order","Class, domain, kingdom, phylum","Genus, species, domain, kingdom"],0,"The hierarchy proceeds domain, kingdom, phylum, class, order, family, genus, species."],
+[A,"A trait shared because it was inherited from a common ancestor is a:",["Homology","Analogy","Mutation rate","Vestigial behavior"],0,"Homologous traits reflect shared ancestry, even if their functions differ."]
+]],
+["Ecology & Environment",[
+[F,"Which organisms form the base of most food webs?",["Primary producers","Primary consumers","Secondary consumers","Top predators"],0,"Producers capture energy, commonly through photosynthesis."],
+[F,"What is a population in ecology?",["Individuals of one species in an area","All species on Earth","All abiotic factors in an ecosystem","Every ecosystem in a biome"],0,"A population is a group of individuals of the same species living in an area."],
+[I,"Why does available energy generally decrease at higher trophic levels?",["Energy is lost as heat and used in metabolism at each transfer","Energy is created at every level","Consumers do not respire","Producers store no energy"],0,"Only a fraction of energy is transferred to the next trophic level."],
+[I,"Nitrogen fixation converts atmospheric nitrogen gas into:",["Ammonia or related biologically usable nitrogen","Oxygen gas","Glucose","Carbon dioxide"],0,"Nitrogen-fixing microbes reduce N₂ to ammonia."],
+[A,"A keystone predator is removed and herbivore numbers rise sharply. The likely result is:",["A trophic cascade affecting plant communities","No change because predators do not affect prey","Immediate formation of a new biome","A halt to primary production everywhere"],0,"Removing a keystone predator can indirectly alter lower trophic levels."]
+]],
+["Human Anatomy & Physiology",[
+[F,"Which blood component primarily transports oxygen?",["Red blood cells","Platelets","Plasma antibodies","Neurons"],0,"Hemoglobin in red blood cells binds and transports most blood oxygen."],
+[F,"Which organ filters blood and produces urine?",["Kidney","Liver","Pancreas","Spleen"],0,"The kidneys filter blood, regulate water and ions, and produce urine."],
+[I,"Insulin generally lowers blood glucose by:",["Promoting glucose uptake and storage","Stimulating glycogen breakdown","Preventing all cellular respiration","Increasing glucagon secretion"],0,"Insulin promotes uptake and storage of glucose, including glycogen synthesis."],
+[I,"Which division of the nervous system generally controls voluntary skeletal muscle movement?",["Somatic nervous system","Parasympathetic division only","Enteric nervous system","Endocrine system"],0,"The somatic motor system controls voluntary skeletal muscle activity."],
+[A,"When body temperature rises, sweating and skin vasodilation help restore normal temperature. This is:",["Negative feedback","Positive feedback","Feedforward mutation","Osmosis"],0,"Negative feedback responses counteract the initial change."]
+]],
+["Diseases",[
+[F,"Cholera is caused by which type of pathogen?",["Bacterium","Virus","Fungus","Prion"],0,"Cholera is caused by the bacterium Vibrio cholerae."],
+[F,"Which route commonly spreads cholera?",["Ingesting water or food contaminated with the bacterium","Mosquito bites","Inherited mutation","Breathing pollen"],0,"Cholera is transmitted by the fecal-oral route, often through contaminated water or food."],
+[I,"The severe watery diarrhea of cholera is primarily caused by:",["Cholera toxin disrupting ion transport in intestinal cells","Destruction of red blood cells","A virus attacking neurons","A blockage of the kidneys"],0,"Cholera toxin increases intestinal chloride secretion, driving water loss."],
+[I,"Which intervention is central to treating severe cholera dehydration?",["Rapid oral or intravenous rehydration","Antihistamines alone","Avoiding all fluids","Insulin injections"],0,"Replacing water and electrolytes is lifesaving; antibiotics may be used in selected cases."],
+[A,"Why can antibiotics alone be insufficient treatment for severe cholera?",["Rapid fluid and electrolyte loss must be corrected immediately","The disease is caused by a virus","Antibiotics always worsen dehydration","The bacterium lives only in red blood cells"],0,"The immediate danger is profound dehydration, so rehydration is the priority."]
+]]
+];
+for(const t of bioTopics)addTopic("Biology",t[0],t[1]);
+const chemTopics=[
+["Fundamentals",[
+[F,"Which is an SI base unit for amount of substance?",["Mole","Gram","Liter","Newton"],0,"The mole is the SI base unit for amount of substance."],
+[F,"A homogeneous mixture is also called a:",["Solution","Suspension","Pure element","Heterogeneous mixture"],0,"A solution has uniform composition at the scale considered."],
+[I,"How many significant figures are in 0.004050?",["4","3","5","6"],0,"Leading zeros are not significant; the zero between 4 and 5 and the trailing decimal zero are significant: 4 figures."],
+[I,"Which change is chemical rather than physical?",["Iron rusting","Ice melting","Ethanol evaporating","Salt dissolving without reaction"],0,"Rusting forms new substances, iron oxides."],
+[A,"A measured result is repeatable but consistently differs from the accepted value. It is:",["Precise but inaccurate","Accurate but imprecise","Both accurate and precise","Neither measurable nor repeatable"],0,"Precision concerns repeatability; accuracy concerns closeness to the accepted value."]
+]],
+["Stoichiometry",[
+[F,"One mole contains approximately:",["6.022 × 10²³ entities","3.00 × 10⁸ entities","9.81 entities","1.00 × 10⁻²³ entities"],0,"Avogadro's constant is approximately 6.022×10²³ mol⁻¹."],
+[F,"What coefficient balances H₂ + O₂ → H₂O when written in lowest whole numbers?",["2, 1, 2","1, 1, 1","1, 2, 2","2, 2, 1"],0,"2H₂ + O₂ → 2H₂O balances four H atoms and two O atoms."],
+[I,"How many moles are in 18.0 g of water? (M=18.0 g/mol)",["1.00 mol","0.500 mol","2.00 mol","18.0 mol"],0,"n=m/M=18.0/18.0=1.00 mol."],
+[I,"If theoretical yield is 20.0 g and actual yield is 15.0 g, percent yield is:",["75.0%","25.0%","80.0%","133%"],0,"Percent yield = actual/theoretical ×100 = 15.0/20.0×100=75.0%."],
+[A,"For N₂ + 3H₂ → 2NH₃, 2.0 mol N₂ reacts with 3.0 mol H₂. What is the limiting reactant?",["H₂","N₂","NH₃","Neither"],0,"2.0 mol N₂ requires 6.0 mol H₂; only 3.0 mol H₂ is available."]
+]],
+["Atomic Theory",[
+[F,"The atomic number equals the number of:",["Protons","Neutrons","Protons plus neutrons","Electron shells"],0,"Atomic number is defined by proton count."],
+[F,"Which scientist proposed quantized energy to explain blackbody radiation?",["Max Planck","John Dalton","Robert Boyle","Antoine Lavoisier"],0,"Planck introduced energy quantization in 1900."],
+[I,"Which quantum number describes an orbital's orientation?",["Magnetic quantum number (mℓ)","Principal quantum number (n)","Spin quantum number (ms)","Atomic number (Z)"],0,"The magnetic quantum number specifies orbital orientation within a subshell."],
+[I,"How many electrons can occupy one orbital?",["2","1","6","10"],0,"An orbital holds up to two electrons with opposite spins."],
+[A,"Which set of quantum numbers is impossible?",["n=2, ℓ=2, mℓ=0, ms=+½","n=3, ℓ=2, mℓ=−1, ms=−½","n=1, ℓ=0, mℓ=0, ms=+½","n=2, ℓ=1, mℓ=+1, ms=−½"],0,"For a given n, ℓ ranges from 0 to n−1; when n=2, ℓ can only be 0 or 1."]
+]],
+["Chemical Bonding & Structure",[
+[F,"An ionic bond is primarily the electrostatic attraction between:",["Oppositely charged ions","Two neutral noble-gas atoms","Two nuclei only","Two nonpolar molecules"],0,"Ionic bonding involves attraction between cations and anions."],
+[F,"What is the molecular geometry of CH₄?",["Tetrahedral","Linear","Trigonal planar","Bent"],0,"Four bonding electron domains around carbon give tetrahedral geometry."],
+[I,"What is the approximate bond angle in a trigonal planar molecule?",["120°","109.5°","180°","90°"],0,"Three electron domains arrange in a plane at approximately 120°."],
+[I,"Which molecule is polar?",["H₂O","CO₂","CCl₄","BF₃"],0,"Water has polar O–H bonds and a bent shape, so dipoles do not cancel."],
+[A,"How many sigma and pi bonds are in N₂ (triple bond)?",["1 sigma and 2 pi","2 sigma and 1 pi","3 sigma and 0 pi","0 sigma and 3 pi"],0,"A triple bond contains one sigma bond and two pi bonds."]
+]],
+["Gases",[
+[F,"Which equation is the ideal gas law?",["PV=nRT","P₁V₁=P₂V₂ only","q=mcΔT","E=hf"],0,"The ideal gas law relates pressure, volume, moles, and absolute temperature."],
+[F,"At constant temperature and amount of gas, pressure and volume are:",["Inversely proportional","Directly proportional","Always equal","Unrelated"],0,"Boyle's law states PV is constant at fixed temperature and moles."],
+[I,"A gas occupies 2.0 L at 1.0 atm. At 2.0 atm and constant temperature, its volume is:",["1.0 L","2.0 L","4.0 L","0.5 L"],0,"P₁V₁=P₂V₂, so V₂=(1.0×2.0)/2.0=1.0 L."],
+[I,"The partial pressure of a gas in a mixture is its:",["Contribution to total pressure","Mass divided by volume","Molar mass","Boiling point"],0,"Dalton's law says total pressure is the sum of component partial pressures."],
+[A,"At the same temperature, which gas has the greatest root-mean-square speed?",["H₂","O₂","CO₂","Xe"],0,"At equal temperature, lighter molecules have greater rms speed."]
+]],
+["Liquids & Solids",[
+[F,"Which intermolecular force is present in all molecular substances?",["London dispersion forces","Hydrogen bonding","Ion-dipole forces","Covalent network bonding"],0,"Temporary induced dipoles create dispersion forces in all atoms and molecules."],
+[F,"Which substance can form hydrogen bonds between its molecules?",["NH₃","CH₄","CO₂","CCl₄"],0,"Hydrogen bonded to N, O, or F can participate in hydrogen bonding."],
+[I,"Why does water have an unusually high boiling point for its molar mass?",["Extensive hydrogen bonding","It has no intermolecular forces","It is nonpolar","Its molecules are ionic"],0,"Hydrogen bonds require substantial energy to overcome."],
+[I,"What happens to temperature during the melting of a pure substance at constant pressure?",["It remains constant while the phase change occurs","It rises continuously","It falls to absolute zero","It doubles"],0,"Added energy breaks or loosens intermolecular organization rather than raising temperature during the phase change."],
+[A,"Which solid consists of atoms linked in an extended covalent network?",["Diamond","Ice","Solid argon","Sodium chloride"],0,"Diamond is a covalent network solid with each carbon bonded to four others."]
+]],
+["Thermodynamics",[
+[F,"An exothermic reaction has:",["ΔH < 0","ΔH > 0","ΔS = 0 always","ΔG > 0 always"],0,"Exothermic processes release heat; enthalpy change is negative."],
+[F,"What is the SI unit of energy?",["Joule","Watt","Pascal","Kelvin"],0,"The joule is the SI unit of energy."],
+[I,"If a system absorbs 500 J of heat and does 200 J of work on its surroundings, ΔE is:",["+300 J","+700 J","−300 J","−700 J"],0,"Using ΔE=q+w, q=+500 J and w=−200 J, so ΔE=+300 J."],
+[I,"Which quantity measures dispersal of energy or the number of accessible microscopic arrangements?",["Entropy","Enthalpy","Pressure","Molarity"],0,"Entropy is related to the number of accessible microstates and energy dispersal."],
+[A,"A process is spontaneous at constant temperature and pressure when:",["ΔG < 0","ΔG > 0","ΔH must be negative","ΔS must be negative"],0,"A negative Gibbs free-energy change indicates thermodynamic spontaneity under those conditions."]
+]],
+["Physical Equilibria",[
+[F,"At the normal boiling point of a liquid:",["Its vapor pressure equals external pressure","Its vapor pressure is zero","Its molecules stop moving","Its temperature must be 0°C"],0,"Boiling occurs when vapor pressure equals the external pressure."],
+[F,"A phase diagram plots phase stability as a function of:",["Temperature and pressure","Mass and volume only","Time and concentration","Wavelength and frequency"],0,"Pressure-temperature diagrams show stable phases and phase boundaries."],
+[I,"At the triple point, how many phases coexist in equilibrium?",["Three","Two","One","Four"],0,"Solid, liquid, and gas coexist at the triple point."],
+[I,"Adding a nonvolatile solute to a solvent generally:",["Lowers the solvent vapor pressure","Raises the vapor pressure","Leaves vapor pressure unchanged","Makes the solvent boil at a lower temperature"],0,"Raoult's law predicts lower solvent vapor pressure for an ideal solution with nonvolatile solute."],
+[A,"Which colligative property depends on the number of dissolved particles rather than their identity?",["Boiling-point elevation","Color change","Chemical reactivity","Molecular geometry"],0,"Colligative properties depend on solute particle concentration."]
+]],
+["Chemical Equilibria",[
+[F,"At chemical equilibrium:",["Forward and reverse reaction rates are equal","Reactant and product concentrations are equal","All reactions stop","Only products remain"],0,"Dynamic equilibrium has equal forward and reverse rates; concentrations are constant, not necessarily equal."],
+[F,"For aA + bB ⇌ cC, the equilibrium expression Kc contains:",["Product concentrations over reactant concentrations, each raised to coefficients","Only reactant concentrations","The reaction rate","Pure solid concentrations"],0,"Kc is written as products over reactants with stoichiometric exponents; pure solids and liquids are omitted."],
+[I,"If Q < K, the reaction proceeds net toward:",["Products","Reactants","No change","A catalyst"],0,"The system forms products until Q rises to K."],
+[I,"Adding a catalyst to a system at equilibrium:",["Does not change K or equilibrium composition","Increases K","Shifts equilibrium toward products","Stops the reverse reaction"],0,"A catalyst speeds both directions and does not change the equilibrium constant."],
+[A,"For an exothermic forward reaction, increasing temperature shifts equilibrium:",["Toward reactants","Toward products","Nowhere","Only if a catalyst is added"],0,"Heat acts like a product in an exothermic reaction; adding heat favors the reverse direction."]
+]],
+["Acids & Bases",[
+[F,"A Brønsted-Lowry acid is a:",["Proton donor","Proton acceptor","Electron-pair donor","Salt"],0,"Brønsted-Lowry acids donate H⁺."],
+[F,"At 25°C, a neutral aqueous solution has pH approximately:",["7","0","14","1"],0,"At 25°C, neutral water has [H₃O⁺]=10⁻⁷ M and pH 7."],
+[I,"What is the pH of a solution with [H₃O⁺]=1.0×10⁻³ M?",["3","−3","11","7"],0,"pH=−log[H₃O⁺]=3."],
+[I,"A buffer resists changes in pH because it contains:",["A weak acid/base and its conjugate partner","Only strong acid","Only pure water","An insoluble metal"],0,"A conjugate acid-base pair can consume added acid or base."],
+[A,"At the half-equivalence point in a weak-acid/strong-base titration:",["pH = pKa","pH = 7 exactly","pOH = 0","All acid has been neutralized"],0,"At half-equivalence, [HA]=[A⁻], so Henderson-Hasselbalch gives pH=pKa."]
+]],
+["Solubility Equilibria",[
+[F,"The solubility product Ksp describes equilibrium involving:",["A sparingly soluble ionic solid and its dissolved ions","A gas and its container","A strong acid only","A redox cell"],0,"Ksp is the equilibrium constant for dissolution of a sparingly soluble ionic solid."],
+[F,"A precipitate forms when the ion product Qsp is:",["Greater than Ksp","Less than Ksp","Equal to zero","Always equal to Ksp"],0,"Supersaturation occurs when Qsp exceeds Ksp, favoring precipitation."],
+[I,"For AgCl(s) ⇌ Ag⁺ + Cl⁻, Ksp equals:",["[Ag⁺][Cl⁻]","[AgCl]","[Ag⁺]/[Cl⁻]","[Ag⁺]+[Cl⁻]"],0,"The pure solid is omitted; Ksp is the product of dissolved ion concentrations."],
+[I,"Adding a common ion to a saturated salt solution generally:",["Decreases its solubility","Increases its solubility","Has no possible effect","Changes the salt's formula"],0,"The common-ion effect shifts dissolution equilibrium toward the solid."],
+[A,"For MX₂(s) ⇌ M²⁺ + 2X⁻, if molar solubility is s, Ksp is:",["4s³","2s²","s²","4s²"],0,"[M²⁺]=s and [X⁻]=2s, so Ksp=s(2s)²=4s³."]
+]],
+["Electrochemistry",[
+[F,"Oxidation is:",["Loss of electrons","Gain of electrons","Gain of protons only","Loss of neutrons"],0,"Oxidation is loss of electrons; reduction is gain."],
+[F,"In a galvanic cell, oxidation occurs at the:",["Anode","Cathode","Salt bridge","Voltmeter"],0,"The anode is the site of oxidation in both galvanic and electrolytic cells."],
+[I,"In a galvanic cell, electrons flow through the external wire from:",["Anode to cathode","Cathode to anode","Salt bridge to anode","Solution to salt bridge"],0,"Electrons are released at the anode and consumed at the cathode."],
+[I,"If E°cell is positive, the cell reaction as written is:",["Spontaneous under standard conditions","Nonspontaneous under standard conditions","At equilibrium","Impossible to occur"],0,"A positive standard cell potential corresponds to negative standard ΔG."],
+[A,"Which change increases the cell potential for a spontaneous reaction under nonstandard conditions, according to Nernst?",["Changing concentrations to lower the reaction quotient Q","Increasing Q while all else is fixed","Removing all electrodes","Adding an inert wire only"],0,"E=E°−(RT/nF)lnQ; lowering Q raises E under the stated conditions."]
+]],
+["Chemical Kinetics",[
+[F,"Reaction rate describes change in:",["Concentration per unit time","Mass per mole","Temperature per distance","Pressure per volume only"],0,"Rate measures how quickly reactant or product concentrations change."],
+[F,"A catalyst increases reaction rate by:",["Lowering activation energy","Increasing the reaction enthalpy","Changing the equilibrium constant","Being permanently consumed"],0,"Catalysts provide an alternative pathway with lower activation energy."],
+[I,"For a first-order reaction, doubling reactant concentration changes the rate by a factor of:",["2","4","1/2","No change"],0,"A first-order rate law is rate=k[A]."],
+[I,"The half-life of a first-order reaction is:",["Independent of initial concentration","Directly proportional to initial concentration","Always 1 second","Zero"],0,"For first-order kinetics, t½=ln2/k."],
+[A,"A plot of ln[A] versus time is linear for which reaction order?",["First order","Zero order","Second order","Third order"],0,"Integrated first-order kinetics gives ln[A]=−kt+ln[A]₀."]
+]]
+];
+for(const t of chemTopics)addTopic("Chemistry",t[0],t[1]);
+const physicsTopics=[
+["Astronomy: Galaxies",[
+[F,"What type of galaxy is the Milky Way?",["Barred spiral","Elliptical","Irregular","Ring only"],0,"The Milky Way is classified as a barred spiral galaxy."],
+[F,"The Sun is located in which part of the Milky Way?",["The Orion Arm (Local Spur)","The galactic center","The Magellanic Stream","The outer halo beyond the disk"],0,"The Solar System lies in the Orion Arm/Local Spur, roughly 26,000 light-years from the center."],
+[I,"What provides strong evidence for dark matter in galaxies?",["Observed rotation speeds remain high far from galactic centers","All stars have identical colors","Galaxies emit no light","The Sun's daily motion"],0,"Flat galactic rotation curves imply more gravitating mass than visible matter alone."],
+[I,"A light-year is a unit of:",["Distance","Time","Brightness","Speed"],0,"A light-year is the distance light travels in one year."],
+[A,"Hubble's law relates a galaxy's recession speed to its:",["Distance, approximately v=H₀d","Mass, v=mc²","Temperature, v=fλ","Age only"],0,"For relatively nearby galaxies in the expanding universe, recession speed is approximately proportional to distance."]
+]],
+["Measurement & Dimensional Analysis",[
+[F,"How many meters are in 3.2 kilometers?",["3200 m","32 m","0.0032 m","320 m"],0,"1 km=1000 m, so 3.2 km=3200 m."],
+[F,"Which is the correct SI unit for force?",["Newton","Joule","Watt","Pascal"],0,"One newton is one kg·m/s²."],
+[I,"How many significant figures are in 12.030?",["5","4","3","6"],0,"The captive zero and trailing decimal zero are significant."],
+[I,"What is the order of magnitude of 7.5×10⁶?",["10⁷","10⁶","10⁵","10⁸"],0,"7.5×10⁶ is closer to 10⁷ than to 10⁶ on a logarithmic scale."],
+[A,"A quantity is calculated as v²/r. If v has 2% uncertainty and r has 1% uncertainty, approximate maximum percentage uncertainty is:",["5%","3%","1%","2%"],0,"For powers and quotients, relative uncertainties add with powers: 2(2%)+1%=5%."]
+]],
+["Kinematics",[
+[F,"A runner moves 100 m in 20 s. What is the average speed?",["5 m/s","20 m/s","2000 m/s","0.2 m/s"],0,"Average speed = distance/time = 100/20 = 5 m/s."],
+[F,"An object starts from rest and accelerates at 2 m/s² for 3 s. Its final speed is:",["6 m/s","2 m/s","3 m/s","12 m/s"],0,"v=v₀+at=0+2×3=6 m/s."],
+[I,"A ball is thrown horizontally from a cliff. Neglecting air resistance, its horizontal acceleration is:",["Zero","9.8 m/s² downward","9.8 m/s² forward","Increasing with time"],0,"Gravity acts vertically; horizontal velocity remains constant in ideal projectile motion."],
+[I,"A freely falling object released from rest falls for 2 s. Approximately how far does it fall? (g=9.8 m/s²)",["19.6 m","9.8 m","39.2 m","4.9 m"],0,"y=½gt²=0.5×9.8×4=19.6 m."],
+[A,"A projectile is launched at speed v and angle θ on level ground. Its range is proportional to:",["v² sin(2θ)","v sin θ only","v² cos θ","1/v"],0,"For equal launch and landing heights, R=v²sin(2θ)/g."]
+]],
+["Forces & Newton's Laws",[
+[F,"Newton's first law is also known as the law of:",["Inertia","Gravitation","Action-reaction only","Conservation of charge"],0,"An object maintains its state of motion unless acted on by a net external force."],
+[F,"What is the weight of a 5 kg object near Earth's surface? (g=9.8 m/s²)",["49 N","5 N","0.51 N","98 N"],0,"Weight=mg=5×9.8=49 N."],
+[I,"A 10 kg box is pushed with 50 N on a frictionless floor. Its acceleration is:",["5 m/s²","0.2 m/s²","40 m/s²","500 m/s²"],0,"a=F/m=50/10=5 m/s²."],
+[I,"A 20 N force acts on a 5 kg object; friction is 5 N opposite motion. Acceleration is:",["3 m/s²","4 m/s²","5 m/s²","1 m/s²"],0,"Net force=20−5=15 N; a=15/5=3 m/s²."],
+[A,"A block rests on an incline. Which force component tends to pull it down the slope?",["mg sin θ","mg cos θ","Normal force","Mass divided by gravity"],0,"Resolving weight parallel to the incline gives mg sinθ."]
+]],
+["Work, Energy & Momentum",[
+[F,"Work done by a constant force parallel to displacement is:",["W=Fd","W=F/d","W=mv","W=ma"],0,"Work is force times displacement in the force direction."],
+[F,"What is the kinetic energy of a 2 kg object moving at 3 m/s?",["9 J","6 J","18 J","3 J"],0,"KE=½mv²=0.5×2×9=9 J."],
+[I,"A 4 kg object is lifted 2 m. Its gain in gravitational potential energy is approximately:",["78.4 J","8 J","19.6 J","39.2 J"],0,"ΔU=mgh=4×9.8×2=78.4 J."],
+[I,"A 0.2 kg ball moving at 10 m/s has momentum:",["2 kg·m/s","0.02 kg·m/s","50 kg·m/s","10.2 kg·m/s"],0,"p=mv=0.2×10=2 kg·m/s."],
+[A,"A 2 kg cart at 4 m/s collides and sticks to a 2 kg cart at rest. Their final speed is:",["2 m/s","4 m/s","1 m/s","8 m/s"],0,"Momentum conservation: (2×4+2×0)/(2+2)=2 m/s."]
+]],
+["Circular & Rotational Motion",[
+[F,"Centripetal acceleration points:",["Toward the center of the circular path","Away from the center","Along the tangent","Opposite gravity always"],0,"Centripetal acceleration changes direction of velocity toward the circle's center."],
+[F,"The SI unit of angular velocity is:",["rad/s","m/s","N·m","kg·m²"],0,"Angular velocity is measured in radians per second."],
+[I,"A 2 kg mass moves in a circle of radius 4 m at 6 m/s. Centripetal force is:",["18 N","3 N","12 N","72 N"],0,"F=mv²/r=2×36/4=18 N."],
+[I,"Torque magnitude for a perpendicular force F applied at lever arm r is:",["τ=rF","τ=F/r","τ=mr","τ=Iω"],0,"Torque is force times perpendicular lever arm."],
+[A,"If the moment of inertia is doubled while angular momentum stays constant, angular speed:",["Is halved","Doubles","Stays the same","Quadruples"],0,"L=Iω; with fixed L, doubling I halves ω."]
+]],
+["Oscillations & Waves",[
+[F,"The period of a wave is:",["The time for one cycle","Cycles per second","Distance between crests","Wave height"],0,"Period is time per cycle; frequency is cycles per second."],
+[F,"A wave has frequency 4 Hz. Its period is:",["0.25 s","4 s","2 s","8 s"],0,"T=1/f=1/4=0.25 s."],
+[I,"A string fixed at both ends vibrates in its fundamental mode. The string length equals:",["Half a wavelength","One wavelength","Two wavelengths","One-quarter wavelength"],0,"The fundamental has nodes at both ends and one antinode, so L=λ/2."],
+[I,"The Doppler effect is a change in observed:",["Frequency due to relative motion","Wave speed in every medium","Amplitude due only to temperature","Wavelength independent of motion"],0,"Relative motion changes observed frequency and wavelength."],
+[A,"For a mass-spring oscillator, if mass is quadrupled and spring constant is unchanged, period:",["Doubles","Halves","Quadruples","Is unchanged"],0,"T=2π√(m/k); quadrupling m doubles T."]
+]],
+["Thermodynamics",[
+[F,"Heat naturally flows from:",["Higher temperature to lower temperature","Lower temperature to higher temperature","Lower mass to higher mass only","Lower pressure to higher pressure always"],0,"Net spontaneous heat transfer is from hot to cold."],
+[F,"The first law of thermodynamics expresses conservation of:",["Energy","Charge only","Momentum only","Entropy only"],0,"The first law relates internal-energy change to heat and work."],
+[I,"A 0.50 kg sample with specific heat 400 J/(kg·°C) warms by 10°C. Heat absorbed is:",["2000 J","200 J","4000 J","20 J"],0,"q=mcΔT=0.50×400×10=2000 J."],
+[I,"In an adiabatic process, the heat transfer q is:",["Zero","Positive always","Negative always","Equal to work"],0,"Adiabatic means no heat is transferred, q=0."],
+[A,"A heat engine absorbs 800 J and rejects 500 J per cycle. Its efficiency is:",["37.5%","62.5%","160%","25%"],0,"Wout=800−500=300 J; efficiency=300/800=0.375=37.5%."]
+]],
+["DC Circuits",[
+[F,"Ohm's law is:",["V=IR","P=IV²","Q=It²","R=VI"],0,"Voltage equals current times resistance for an ohmic component under fixed conditions."],
+[F,"Two 4 Ω resistors in series have equivalent resistance:",["8 Ω","2 Ω","4 Ω","16 Ω"],0,"Series resistances add: 4+4=8 Ω."],
+[I,"Two 6 Ω resistors in parallel have equivalent resistance:",["3 Ω","12 Ω","6 Ω","36 Ω"],0,"For equal resistors in parallel, Req=R/2=3 Ω."],
+[I,"A 12 V battery is connected across a 4 Ω resistor. Current is:",["3 A","48 A","0.33 A","16 A"],0,"I=V/R=12/4=3 A."],
+[A,"A capacitor's stored energy is:",["½CV²","CV","C/V","½IV"],0,"Energy stored in a capacitor is U=½CV²."]
+]],
+["Electric Fields & Potential",[
+[F,"The SI unit of electric charge is:",["Coulomb","Ampere","Volt","Ohm"],0,"Electric charge is measured in coulombs."],
+[F,"Like electric charges:",["Repel","Attract","Have no force","Always neutralize instantly"],0,"Like charges repel; opposite charges attract."],
+[I,"The electric field due to a positive point charge points:",["Radially outward","Radially inward","In circles around the charge","Only upward"],0,"A positive test charge is repelled, so the field points outward."],
+[I,"Electric potential difference is measured in:",["Volts","Coulombs","Teslas","Newtons"],0,"One volt is one joule per coulomb."],
+[A,"For a point charge, electric field magnitude varies with distance r as:",["1/r²","1/r","r²","r"],0,"Coulomb's law gives E proportional to |q|/r²."]
+]],
+["Magnetism",[
+[F,"The SI unit of magnetic field is:",["Tesla","Weber per second only","Volt","Farad"],0,"Magnetic flux density is measured in teslas."],
+[F,"Which particles experience magnetic force when moving through a magnetic field?",["Moving charged particles","Stationary neutral particles","All objects equally","Only neutrons"],0,"The magnetic force qv×B acts on moving charges."],
+[I,"A straight wire carrying current produces magnetic field lines that are:",["Concentric circles around the wire","Straight lines parallel to the wire","Radial lines only","Random"],0,"The right-hand rule gives circular magnetic field lines around a current-carrying wire."],
+[I,"The magnetic force on a charge moving parallel to a uniform magnetic field is:",["Zero","Maximum","Equal to qvB","Always downward"],0,"F=|q|vB sinθ; at θ=0, the force is zero."],
+[A,"A charged particle enters a uniform magnetic field perpendicular to its velocity. Its path is:",["Circular","Straight","Parabolic","Stationary"],0,"The magnetic force is perpendicular to velocity and acts as centripetal force."]
+]],
+["Electromagnetic Induction & AC",[
+[F,"A changing magnetic flux through a loop induces:",["An electromotive force","A permanent magnet","A change in mass","A gravitational field"],0,"Faraday's law states changing magnetic flux induces emf."],
+[F,"The SI unit of magnetic flux is:",["Weber","Tesla per second","Ampere","Ohm"],0,"Magnetic flux is measured in webers."],
+[I,"Lenz's law states that induced current flows in a direction that:",["Opposes the change in magnetic flux producing it","Always aids the change","Always points north","Eliminates resistance"],0,"The induced magnetic effect opposes the change in flux."],
+[I,"In a purely resistive AC circuit, current and voltage are:",["In phase","90° out of phase","180° out of phase","Unrelated"],0,"For a pure resistor, current and voltage reach maxima and zero together."],
+[A,"A transformer has 100 primary turns and 500 secondary turns. If primary voltage is 12 V, ideal secondary voltage is:",["60 V","2.4 V","12 V","500 V"],0,"Vs/Vp=Ns/Np=500/100=5, so Vs=60 V."]
+]],
+["Optics",[
+[F,"The law of reflection states:",["Angle of incidence equals angle of reflection","Angle of incidence is twice the reflection angle","Light always bends toward the normal","Reflection requires a lens"],0,"Angles are measured from the normal to the surface."],
+[F,"A converging lens is also called a:",["Convex lens","Concave lens","Plane mirror","Prism"],0,"A convex lens converges parallel incoming rays toward a focal point."],
+[I,"A ray entering glass from air at an oblique angle generally bends:",["Toward the normal","Away from the normal","Along the surface","Back into the air always"],0,"Light slows in the higher-index medium and refracts toward the normal."],
+[I,"The image formed by a plane mirror is:",["Virtual, upright, and the same size","Real and inverted","Virtual and magnified","Real and smaller"],0,"A plane mirror forms a virtual upright image with unit magnification."],
+[A,"An object is placed beyond 2f from a converging lens. The image is:",["Real, inverted, and between f and 2f","Virtual, upright, and enlarged","At infinity","Upright and same size"],0,"For an object beyond 2f, a converging lens forms a reduced real inverted image between f and 2f."]
+]],
+["Modern & Quantum Physics",[
+[F,"The energy of a photon is:",["E=hf","E=mc","E=½mv²","E=qV²"],0,"Photon energy is Planck's constant times frequency."],
+[F,"The photoelectric effect supports the idea that light:",["Transfers energy in photons","Has no particle properties","Always behaves only as a wave","Cannot eject electrons"],0,"Electrons are emitted when photon frequency exceeds a threshold."],
+[I,"De Broglie's relation for a particle wavelength is:",["λ=h/p","λ=hp","λ=p/h","λ=hf"],0,"Matter wavelength is Planck's constant divided by momentum."],
+[I,"In the double-slit experiment with individual electrons, an interference pattern demonstrates:",["Wave-like behavior","That electrons are classical billiard balls only","That electrons have no charge","That measurement is impossible"],0,"Accumulated detections form an interference pattern, showing quantum wave behavior."],
+[A,"The uncertainty principle relates fundamental limits on simultaneous precision of:",["Position and momentum","Mass and charge","Temperature and color","Energy and electric charge"],0,"For position and momentum, ΔxΔp≥ℏ/2."]
+]],
+["Nuclear & Particle Physics",[
+[F,"An alpha particle consists of:",["Two protons and two neutrons","One proton only","An electron and positron","Two neutrons only"],0,"An alpha particle is a helium-4 nucleus."],
+[F,"Which radiation has the greatest penetrating power among alpha, beta, and gamma?",["Gamma","Alpha","Beta","All are identical"],0,"Gamma rays are highly penetrating electromagnetic radiation."],
+[I,"In beta-minus decay, a neutron transforms into:",["A proton, an electron, and an antineutrino","A proton and positron","Two protons","An alpha particle"],0,"A neutron decays to a proton, electron, and electron antineutrino."],
+[I,"The half-life of a radioactive isotope is the time required for:",["Half the undecayed nuclei in a sample to decay","All nuclei to decay","The mass to double","The activity to become zero"],0,"After one half-life, half the original radioactive nuclei remain on average."],
+[A,"A nucleus has a mass defect. Its binding energy is found using:",["E=Δmc²","E=hf","F=ma","V=IR"],0,"The mass defect corresponds to nuclear binding energy through mass-energy equivalence."]
+]],
+["Experimental/Lab Analysis I",[
+[F,"A graph of position versus time has a straight line with constant positive slope. The object has:",["Constant positive velocity","Constant positive acceleration","Zero velocity","Increasing speed"],0,"The slope of a position-time graph is velocity."],
+[F,"What is the independent variable in an experiment?",["The variable deliberately changed","The measured response","A variable held constant","The final conclusion"],0,"The independent variable is manipulated by the experimenter."],
+[I,"A velocity-time graph has a horizontal line at 4 m/s for 5 s. Displacement is:",["20 m","9 m","1.25 m","0.8 m"],0,"Area under v-t graph = v×t=4×5=20 m."],
+[I,"Why repeat experimental trials?",["To assess variability and improve reliability","To guarantee the expected result","To eliminate all uncertainty","To change the independent variable"],0,"Repeated trials help estimate random variation and improve confidence."],
+[A,"A graph of velocity against time has a slope of −2 m/s². This indicates:",["Constant acceleration of −2 m/s²","Constant velocity of −2 m/s","Displacement of −2 m","A force of −2 N"],0,"The slope of a velocity-time graph is acceleration."]
+]],
+["Experimental/Lab Analysis II",[
+[F,"The slope of a current-voltage graph (I on y-axis, V on x-axis) for an ohmic resistor is:",["1/R","R","IR","V/I²"],0,"I=V/R, so the slope of I versus V is conductance 1/R."],
+[F,"Which instrument measures electric current?",["Ammeter","Voltmeter","Thermometer","Barometer"],0,"An ammeter measures current and is connected in series."],
+[I,"A circuit experiment records voltage and current. If V doubles and I doubles, resistance:",["Remains constant","Doubles","Halves","Quadruples"],0,"Ohm's law gives R=V/I; doubling both leaves the ratio unchanged."],
+[I,"A straight-line graph of ln(activity) versus time has slope −0.20 min⁻¹. The decay constant is:",["0.20 min⁻¹","−0.20 min","5 min","0.04 min⁻¹"],0,"Radioactive decay follows ln A=ln A₀−λt, so slope=−λ."],
+[A,"When fitting data, a residual is:",["The difference between an observed value and the model's predicted value","The slope of the best-fit line","The independent variable","The mean of all measurements"],0,"Residuals help assess model fit and systematic patterns."]
+]]
+];
+for(const t of physicsTopics)addTopic("Physics",t[0],t[1]);
+
 /* 2026-27 directed-reading practice: original questions organized by the
    published chapter themes. These are study questions, not quotations. */
 const BOOK_Q = [
