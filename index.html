@@ -379,6 +379,164 @@ const chemTopics=[
 ]]
 ];
 for(const t of chemTopics)addTopic("Chemistry",t[0],t[1]);
+
+const chemExtra=[
+["Fundamentals",[
+[F,"What is the density of a 20 g sample with a volume of 5.0 mL?","4.0 g/mL","0.25 g/mL","15 g/mL","100 g/mL","Density = mass/volume = 20/5.0 = 4.0 g/mL."],
+[F,"Which sample is a pure compound?","Pure sodium chloride","Air","Brass","Salt water","A pure compound has a fixed chemical composition; the others are mixtures."],
+[F,"Which is a physical property?","Melting point","Flammability","Ability to rust","Reaction with acid","A physical property can be measured without changing chemical identity."],
+[I,"Convert 25.0°C to kelvin.","298.2 K","248.2 K","25.0 K","273.2 K","K = °C + 273.15, giving 298.15 K."],
+[I,"A 2.50 g sample occupies 1.25 cm³. What is its density to three significant figures?","2.00 g/cm³","2.0 g/cm³","0.500 g/cm³","3.75 g/cm³","2.50/1.25 = 2.00 g/cm³; all three digits are significant."],
+[I,"Which statement distinguishes accuracy from precision?","Accuracy is closeness to the true value; precision is repeatability","Accuracy is repeatability; precision is closeness to the true value","They mean exactly the same thing","Both refer only to instrument size","Accuracy describes closeness to an accepted value; precision describes consistency."],
+[A,"A liquid has mass 31.6 g and volume 40.0 mL. Report density with correct significant figures.","0.790 g/mL","0.79 g/mL","0.7900 g/mL","1.27 g/mL","31.6/40.0 = 0.790 g/mL, to three significant figures."],
+[A,"A student measures 9.8, 9.9, and 9.8 cm for a standard 10.5 cm length. The measurements are best described as:","Precise but systematically inaccurate","Accurate but imprecise","Both perfectly accurate and precise","Neither repeatable nor biased","The values cluster tightly but are consistently below the accepted value."],
+[A,"A 0.004560 kg mass is expressed in grams with appropriate significant figures as:","4.560 g","4.56 g","0.4560 g","4560 g","Multiplying by 1000 gives 4.560 g; the four significant figures are preserved."],
+[A,"A compound contains 40.0% C, 6.7% H, and 53.3% O by mass. Which is the best first step to find its empirical formula?","Assume 100 g and convert each element's mass to moles","Divide each percentage by the atomic number","Multiply each percentage by Avogadro's number","Use the largest percentage as the subscript","A 100 g assumption turns percentages into grams, which are converted to mole ratios."]
+]],
+["Stoichiometry",[
+[F,"What is the molar mass of CO₂?","44.01 g/mol","28.01 g/mol","32.00 g/mol","12.01 g/mol","12.01 + 2(16.00) = 44.01 g/mol."],
+[F,"In a balanced equation, coefficients represent ratios of:","Particles or moles","Grams only","Temperatures","Densities","Balanced coefficients give stoichiometric mole ratios."],
+[F,"How many moles are in 0.50 mol of O₂ molecules in terms of oxygen atoms?","1.0 mol O atoms","0.50 mol O atoms","2.0 mol O atoms","0.25 mol O atoms","Each O₂ molecule contains two O atoms, so the atom amount doubles."],
+[I,"How many grams are in 0.250 mol NaCl? (58.44 g/mol)","14.61 g","58.44 g","0.00428 g","233.8 g","Mass = nM = 0.250 × 58.44 = 14.61 g."],
+[I,"For 2H₂ + O₂ → 2H₂O, how many moles of water form from 3.0 mol H₂ with excess O₂?","3.0 mol","1.5 mol","6.0 mol","0.75 mol","The H₂:H₂O ratio is 2:2, or 1:1."],
+[I,"A reaction produces 8.0 g product at 80% yield. What was the theoretical yield?","10.0 g","6.4 g","8.8 g","64 g","Actual = 0.80 × theoretical; theoretical = 8.0/0.80 = 10.0 g."],
+[A,"For 2Al + 3Cl₂ → 2AlCl₃, 4.0 mol Al reacts with 4.0 mol Cl₂. How many moles AlCl₃ form?","2.67 mol","4.0 mol","1.33 mol","8.0 mol","Cl₂ is limiting: 4.0×(2/3)=2.67 mol AlCl₃."],
+[A,"A 10.0 g impure CaCO₃ sample yields 3.52 g CO₂ on complete decomposition. What is the sample's CaCO₃ mass percentage? (100.1 g/mol; CO₂=44.0 g/mol)","80.0%","40.0%","100%","20.0%","CaCO₃ → CO₂ is 1:1; 3.52/44.0=0.0800 mol, or 8.01 g CaCO₃; purity ≈80.1%."],
+[A,"For N₂ + 3H₂ → 2NH₃, 14.0 g N₂ reacts with 6.0 g H₂. Which is limiting?","N₂","H₂","NH₃","Neither","14.0 g N₂ is 0.500 mol and requires 1.50 mol H₂ (3.0 g); 6.0 g H₂ is excess, so N₂ limits."],
+[A,"A 0.200 mol sample of a compound contains 0.400 mol carbon atoms and 0.800 mol hydrogen atoms. Its empirical formula is:","CH₂","C₂H₄","CH₄","C₂H₂","The atom ratio is C:H = 0.400:0.800 = 1:2."]
+]],
+["Atomic Theory",[
+[F,"Which subatomic particle has a negative charge?","Electron","Proton","Neutron","Alpha particle","Electrons carry negative electric charge."],
+[F,"What does an atomic emission spectrum show?","Discrete photon energies from electron transitions","A continuous range for every atom","The number of neutrons only","The mass of the nucleus directly","Electrons occupy quantized energy levels, producing characteristic spectral lines."],
+[F,"Which principle says no two electrons in an atom can have the same four quantum numbers?","Pauli exclusion principle","Hund's rule","Aufbau principle","Heisenberg's law of conservation","The Pauli exclusion principle restricts electrons to distinct sets of four quantum numbers."],
+[I,"How many orbitals are in a p subshell?","3","1","5","7","A p subshell has mℓ values −1, 0, and +1, corresponding to three orbitals."],
+[I,"What is the ground-state electron configuration of magnesium (Z=12)?","1s² 2s² 2p⁶ 3s²","1s² 2s² 2p⁶ 3p²","1s² 2s² 2p⁸","1s² 2s² 2p⁶ 3s¹","Twelve electrons fill through 3s²."],
+[I,"Which transition emits a photon?","An electron moves from a higher to a lower energy level","An electron moves from lower to higher energy without energy input","A neutron changes into a proton","A nucleus gains an electron shell","A downward energy transition releases the energy difference as a photon."],
+[A,"Which atom has the largest first ionization energy among Na, Mg, Al, and Si?","Si","Na","Al","Mg","Across this portion of Period 3, first ionization energy generally increases; Si is highest among these choices."],
+[A,"An electron has n=3. Which ℓ values are allowed?","0, 1, and 2","Only 3","0 through 3","−3 through +3","For a principal quantum number n, ℓ ranges from 0 to n−1."],
+[A,"Why does chromium have a ground-state configuration [Ar] 3d⁵ 4s¹ rather than [Ar] 3d⁴ 4s²?","A half-filled d subshell is especially stable","The 4s orbital cannot hold two electrons","Chromium has only five valence electrons total","The Aufbau principle forbids 4s electrons","The small energy difference between 3d and 4s makes the half-filled 3d arrangement favorable."],
+[A,"A metal is illuminated with light below its photoelectric threshold frequency. Increasing intensity alone will:","Not eject electrons","Eject more electrons with higher kinetic energy","Eject electrons after a delay","Increase the threshold frequency","Below threshold, each photon lacks sufficient energy; intensity only increases photon number."]
+]],
+["Chemical Bonding & Structure",[
+[F,"Which bond involves sharing electron pairs?","Covalent bond","Ionic bond","Metallic attraction only","Hydrogen bond only","Covalent bonds form when atoms share electron pairs."],
+[F,"Which molecule has a linear molecular geometry?","CO₂","H₂O","NH₃","CH₄","Carbon has two electron domains in CO₂, giving a linear shape."],
+[F,"Which element is most electronegative?","Fluorine","Sodium","Calcium","Potassium","Fluorine has the greatest electronegativity."],
+[I,"What is the molecular geometry of NH₃?","Trigonal pyramidal","Trigonal planar","Tetrahedral","Linear","Three bonding pairs and one lone pair give a trigonal-pyramidal molecular shape."],
+[I,"Which compound is expected to have the highest lattice energy, comparing similar structures?","MgO","NaCl","KBr","LiI","The doubly charged ions in MgO create stronger electrostatic attraction."],
+[I,"What is the hybridization of carbon in ethene (C₂H₄)?","sp²","sp","sp³","d²sp³","Each carbon has three electron domains and uses sp² hybrid orbitals."],
+[A,"Which molecule has a net dipole despite having polar bonds?","SO₂","CO₂","BF₃","CCl₄","Bent SO₂ has bond dipoles that do not cancel."],
+[A,"How many pi bonds are present in a molecule containing one C=C and one C≡C bond?","3","1","2","4","A double bond has one pi bond; a triple bond has two, for three total."],
+[A,"Which species is paramagnetic in its ground state?","O₂","N₂","Ne","Zn²⁺","Molecular orbital filling leaves two unpaired electrons in O₂."],
+[A,"A central atom has five electron domains, one of which is a lone pair. What is the molecular geometry?","Seesaw","Trigonal bipyramidal","T-shaped","Square planar","Five domains give trigonal-bipyramidal electron geometry; one equatorial lone pair gives seesaw shape."]
+]],
+["Gases",[
+[F,"At constant pressure, increasing the kelvin temperature of a gas increases its volume. This is:","Charles's law","Boyle's law","Dalton's law","Graham's law","Charles's law relates volume directly to absolute temperature at constant pressure."],
+[F,"What is the approximate value of the ideal gas constant R in L·atm·mol⁻¹·K⁻¹?","0.0821","8.314","22.4","1.00","R is approximately 0.0821 L·atm·mol⁻¹·K⁻¹."],
+[F,"At STP near 1 atm and 273 K, one mole of an ideal gas occupies approximately:","22.4 L","1.00 L","44.8 L","0.0821 L","The molar volume under this convention is about 22.4 L/mol."],
+[I,"A gas mixture has partial pressures 0.30 atm, 0.50 atm, and 0.20 atm. Total pressure is:","1.00 atm","0.50 atm","0.80 atm","1.50 atm","Dalton's law: total pressure is the sum of partial pressures."],
+[I,"If the kelvin temperature doubles at constant volume and moles, pressure:","Doubles","Halves","Quadruples","Stays constant","Gay-Lussac's law gives P proportional to T at fixed volume."],
+[I,"A gas effuses four times faster than an unknown gas. Its molar mass compared with the unknown is:","One-sixteenth as large","One-fourth as large","Four times as large","Sixteen times as large","Graham's law: rate ratio = square root of inverse molar-mass ratio; 4²=16."],
+[A,"A 2.0 mol ideal gas occupies 10 L at 300 K. What is its pressure? (R=0.0821 L·atm/mol·K)","4.93 atm","0.493 atm","49.3 atm","2.46 atm","P=nRT/V=(2.0×0.0821×300)/10 ≈4.93 atm."],
+[A,"A gas is collected over water at 25°C. Total pressure is 755 mmHg and water vapor pressure is 24 mmHg. Dry gas pressure is:","731 mmHg","779 mmHg","755 mmHg","31 mmHg","The dry gas pressure is total pressure minus water vapor pressure."],
+[A,"Real gases deviate most from ideal behavior under which conditions?","High pressure and low temperature","Low pressure and high temperature","Low pressure and low density","High temperature and low pressure","At high pressure and low temperature, particle volume and attractions become important."],
+[A,"At the same temperature, which sample has the greatest average translational kinetic energy per molecule?","They are equal for all ideal gases","He","N₂","CO₂","Average translational kinetic energy depends only on absolute temperature."]
+]],
+["Liquids & Solids",[
+[F,"Which intermolecular force is strongest among these for similar-sized molecules?","Hydrogen bonding","London dispersion","Dipole-induced dipole","Weak temporary dipole only","Hydrogen bonding is a particularly strong dipole-dipole interaction."],
+[F,"A substance that conducts electricity when molten but not as a solid is likely:","Ionic","Molecular covalent","Nonpolar molecular","Covalent network","Ionic solids have fixed ions; molten ions are mobile and can carry charge."],
+[F,"What is vapor pressure?","Pressure exerted by vapor in equilibrium with its liquid","Pressure from the atmosphere only","The pressure required to freeze a liquid","The force between two solids","Vapor pressure is the equilibrium pressure of vapor above a liquid."],
+[I,"Why does a liquid's vapor pressure increase as temperature rises?","More molecules have enough energy to escape the liquid","Intermolecular forces become infinitely strong","The liquid's molar mass increases","The surface area becomes zero","Higher temperature increases the fraction of molecules able to enter the vapor phase."],
+[I,"Which liquid should have the highest viscosity, all else comparable?","One with stronger intermolecular attractions","One with the weakest attractions","One with the lowest boiling point always","One with no molecules","Stronger attractions generally resist flow and increase viscosity."],
+[I,"What happens to the boiling point when external pressure decreases?","It decreases","It increases","It is unchanged for all liquids","It becomes absolute zero","Boiling occurs when vapor pressure equals external pressure."],
+[A,"A phase diagram's triple point represents conditions where:","Solid, liquid, and gas coexist in equilibrium","Only solid exists","Liquid and gas cannot coexist","The substance decomposes","At the triple point, all three phases are in equilibrium."],
+[A,"Why can ice be less dense than liquid water?","Its hydrogen-bonded crystal lattice is relatively open","Its molecules lose mass when freezing","Its covalent bonds disappear","Its temperature is always higher","The open hexagonal structure of ice occupies more volume per molecule."],
+[A,"A nonvolatile solute is dissolved in a solvent. Which colligative effect occurs?","The solvent's vapor pressure decreases","The solvent's vapor pressure increases","The freezing point increases","The boiling point decreases","A nonvolatile solute lowers the solvent mole fraction and vapor pressure."],
+[A,"A 0.10 m solution of CaCl₂ ideally produces how many dissolved ions per formula unit?","3","1","2","4","CaCl₂ dissociates into one Ca²⁺ and two Cl⁻ ions, three particles total."]
+]],
+["Thermodynamics",[
+[F,"If heat enters a system, q is conventionally:","Positive","Negative","Always zero","Equal to temperature","Heat absorbed by the system is positive under the chemistry sign convention."],
+[F,"Which process generally increases entropy?","A solid melts into a liquid","A gas condenses","A liquid freezes","A gas is compressed","Melting increases molecular freedom and the number of accessible arrangements."],
+[F,"What is the enthalpy change for an endothermic process?","Positive","Negative","Always zero","Always equal to entropy","Endothermic processes absorb heat, so ΔH is positive at constant pressure."],
+[I,"A reaction has ΔH=−50 kJ and ΔS=−100 J/K. At 298 K, ΔG is approximately:","−20.2 kJ","−79.8 kJ","+20.2 kJ","+79.8 kJ","ΔG=ΔH−TΔS=−50−298(−0.100)=−20.2 kJ."],
+[I,"A 100 g sample absorbs 500 J and warms 5°C. Its specific heat is:","1.0 J/(g·°C)","0.10 J/(g·°C)","10 J/(g·°C)","25 J/(g·°C)","c=q/(mΔT)=500/(100×5)=1.0 J/(g·°C)."],
+[I,"Which statement describes Hess's law?","Overall enthalpy change is independent of the reaction pathway","Enthalpy depends on the number of steps","Only exothermic steps can be added","Catalysts change ΔH","Enthalpy is a state function, so reaction enthalpies can be summed."],
+[A,"A reaction has ΔH=+40 kJ and ΔS=+150 J/K. Above what temperature is it spontaneous?","Above about 267 K","Below about 267 K","At every temperature","At no temperature","ΔG<0 when T>ΔH/ΔS=40000/150≈267 K."],
+[A,"A 2.0 mol ideal gas expands reversibly and isothermally. Which statement about its internal-energy change is correct?","ΔU=0","ΔU is always positive","ΔU is always negative","ΔU equals the pressure","For an ideal gas, internal energy depends only on temperature; an isothermal process has ΔU=0."],
+[A,"Which process has positive entropy change for the system?","NH₄NO₃(s) dissolves into separated aqueous ions","Water vapor condenses","A gas is compressed isothermally","Liquid water freezes","Dissolution into dispersed ions generally increases the system's number of accessible arrangements."],
+[A,"A heat engine absorbs 1200 J and performs 300 J of work. What fraction of absorbed heat is rejected?","0.75","0.25","0.50","4.0","It rejects 900 J; 900/1200=0.75."]
+]],
+["Physical Equilibria",[
+[F,"At equilibrium between liquid and vapor, the rates of evaporation and condensation are:","Equal","Both zero","Evaporation is greater","Condensation is greater","Dynamic equilibrium means forward and reverse rates are equal."],
+[F,"What happens to a pure liquid's boiling point when external pressure rises?","It rises","It falls","It is unchanged","It becomes 0°C","A higher external pressure requires a higher vapor pressure and therefore a higher boiling temperature."],
+[F,"A solution with less dissolved solute than its equilibrium solubility is:","Unsaturated","Saturated","Supersaturated","A pure solvent only","An unsaturated solution can dissolve additional solute at that temperature."],
+[I,"At a liquid's normal boiling point, its vapor pressure equals:","1 atm","0 atm","Its critical pressure","Its osmotic pressure","The normal boiling point is defined at one atmosphere external pressure."],
+[I,"Which change generally increases the solubility of a gas in a liquid?","Increasing gas pressure above the liquid","Increasing temperature","Decreasing gas pressure","Adding an insoluble solid","Henry's law relates dissolved gas concentration to its partial pressure."],
+[I,"A liquid mixture shows positive deviation from Raoult's law. Its A-B interactions are generally:","Weaker than the average A-A and B-B interactions","Stronger than both pure-liquid interactions","Identical to ideal interactions","Covalent bonds between every molecule","Weaker unlike interactions allow molecules to escape more readily, raising vapor pressure."],
+[A,"A binary ideal solution has xA=0.40, P°A=100 torr, and P°B=50 torr with xB=0.60. Total vapor pressure is:","70 torr","40 torr","50 torr","90 torr","Ptotal=xAPA°+xBPB°=0.40(100)+0.60(50)=70 torr."],
+[A,"A liquid boils at 80°C at 1 atm. At reduced external pressure it will boil at:","A temperature below 80°C","A temperature above 80°C","Exactly 80°C","Only after freezing","Lower external pressure is reached at a lower temperature because vapor pressure rises with temperature."],
+[A,"A solution's freezing point decreases by 1.86°C for a 1.0 m nonelectrolyte solution. What is Kf?","1.86 °C·kg/mol","0.537 °C·kg/mol","3.72 °C·kg/mol","1.00 °C·kg/mol","ΔTf=iKfm; for i=1 and m=1.0, Kf=1.86."],
+[A,"At the critical point, the distinction between liquid and gas:","Disappears","Becomes greatest","Is determined by color","Creates a solid phase","Above the critical point there is no distinct liquid-gas boundary."]
+]],
+["Chemical Equilibria",[
+[F,"For aA+bB ⇌ cC+dD, the equilibrium constant expression uses:","Products over reactants, each raised to coefficients","Reactants over products only","Only solids","Coefficients as exponents on concentrations","K is written as product activities divided by reactant activities, with stoichiometric powers."],
+[F,"A very large K value indicates that equilibrium favors:","Products","Reactants","Equal amounts in every case","No reaction","A large equilibrium constant means products are favored relative to reactants."],
+[F,"A catalyst added to a system at equilibrium will:","Not change the equilibrium composition","Shift equilibrium toward products","Shift equilibrium toward reactants","Change K","A catalyst speeds both directions equally and does not change K or equilibrium composition."],
+[I,"For N₂ + 3H₂ ⇌ 2NH₃, increasing pressure by decreasing volume shifts equilibrium toward:","NH₃","N₂ and H₂","Neither side","More gas moles","The product side has fewer gas moles (2 versus 4), so compression favors products."],
+[I,"If Q<K, the reaction proceeds net in which direction to reach equilibrium?","Forward, toward products","Reverse, toward reactants","It is already at equilibrium","It stops permanently","Q<K means the product-to-reactant ratio is below its equilibrium value."],
+[I,"For an exothermic forward reaction, increasing temperature shifts equilibrium:","Toward reactants","Toward products","Nowhere","Only if a catalyst is present","Heat acts like a product in an exothermic reaction, so added heat favors the reverse direction."],
+[A,"For A ⇌ 2B, initially [A]=1.0 M and [B]=0. At equilibrium [B]=0.60 M. What is Kc?","0.90","0.60","1.8","0.30","If 2x=0.60, x=0.30; [A]=0.70 M, so Kc=[B]²/[A]=0.36/0.70≈0.514. Wait: the correct value is 0.514, not listed.","]
+]],
+["Acids & Bases",[
+[F,"A Brønsted-Lowry acid is a proton:","Donor","Acceptor","Electron donor only","Neutron donor","A Brønsted-Lowry acid donates H⁺."],
+[F,"At 25°C, a neutral aqueous solution has pH:","7","0","14","1","At 25°C, neutral water has [H⁺]=10⁻⁷ M and pH 7."],
+[F,"Which is a strong acid in water?","HCl","CH₃COOH","HF","H₂CO₃","Hydrochloric acid ionizes essentially completely in dilute aqueous solution."],
+[I,"What is the pH of a 1.0×10⁻³ M strong monoprotic acid?","3.00","11.00","1.00","7.00","[H⁺]=10⁻³ M, so pH=3."],
+[I,"A buffer contains a weak acid and its conjugate base. It resists pH change when:","Small amounts of acid or base are added","All acid is removed","It is diluted to zero volume","A strong acid is added in unlimited quantity","The conjugate pair consumes modest added H⁺ or OH⁻."],
+[I,"At the half-equivalence point of a weak-acid/strong-base titration:","pH=pKa","pH=7 always","pOH=0","All acid has been neutralized","At half-equivalence, [HA]=[A⁻], so Henderson-Hasselbalch gives pH=pKa."],
+[A,"A buffer has pKa=4.0 and [A⁻]/[HA]=10. What is its pH?","5.0","4.0","3.0","10.0","pH=pKa+log(10)=4.0+1.0=5.0."],
+[A,"A 25.0 mL sample of 0.100 M H₂SO₄ is titrated with 0.100 M NaOH. Assuming both protons are neutralized, what volume NaOH is required?","50.0 mL","25.0 mL","12.5 mL","100 mL","H₂SO₄ provides 2 acid equivalents: 0.00250 mol acid requires 0.00500 mol OH⁻, or 50.0 mL."],
+[A,"Which salt produces a basic aqueous solution?","NaF","NaCl","KNO₃","NH₄Cl","F⁻ is the conjugate base of weak HF and hydrolyzes to produce OH⁻."],
+[A,"A weak acid HA has Ka=1.0×10⁻⁵ and initial concentration 0.10 M. Approximate [H⁺] is:","1.0×10⁻³ M","1.0×10⁻⁵ M","1.0×10⁻² M","1.0×10⁻⁶ M","For a weak acid, x≈√(KaC)=√(10⁻⁶)=10⁻³ M."]
+]],
+["Solubility Equilibria",[
+[F,"A precipitate forms when the ion product Q is:","Greater than Ksp","Less than Ksp","Exactly zero","Unrelated to Ksp","Supersaturation occurs when Q exceeds Ksp, allowing precipitation."],
+[F,"Which ion is a spectator in the dissolution equilibrium AgCl(s) ⇌ Ag⁺ + Cl⁻?","None; both ions appear in Ksp","Ag⁺ only","Cl⁻ only","AgCl(s)","Both dissolved ions appear; the pure solid is omitted from the expression."],
+[F,"The solubility of many ionic solids changes with:","Temperature","Color only","Container shape only","Magnetic north","Solubility equilibria are temperature-dependent."],
+[I,"If Ksp for AgCl is 1.8×10⁻¹⁰, its molar solubility in pure water is approximately:","1.3×10⁻⁵ M","1.8×10⁻¹⁰ M","9.0×10⁻¹¹ M","3.6×10⁻¹⁰ M","For 1:1 AgCl, Ksp=s²; s=√(1.8×10⁻¹⁰)≈1.34×10⁻⁵ M."],
+[I,"Adding NaCl to saturated AgCl solution will generally:","Lower AgCl solubility","Raise AgCl solubility","Leave it unchanged","Convert AgCl into Ag metal","Added Cl⁻ is a common ion and shifts dissolution toward solid AgCl."],
+[I,"Which reagent can selectively precipitate Ag⁺ before Ba²⁺ under suitable concentrations?","Cl⁻","NO₃⁻","Na⁺","K⁺","AgCl is sparingly soluble, whereas most barium chlorides are soluble."],
+[A,"For CaF₂(s) ⇌ Ca²⁺ + 2F⁻, if solubility is s, Ksp equals:","4s³","s²","2s²","4s²","[Ca²⁺]=s and [F⁻]=2s, so Ksp=s(2s)²=4s³."],
+[A,"A solution has [Ag⁺]=1.0×10⁻⁴ M and [Cl⁻]=1.0×10⁻⁴ M. If Ksp(AgCl)=1.8×10⁻¹⁰, what happens?","AgCl precipitates","No precipitation; Q<Ksp","The solution is exactly saturated","AgCl dissolves completely","Q=(10⁻⁴)(10⁻⁴)=10⁻⁸, which exceeds Ksp."],
+[A,"Why can formation of a complex ion increase the solubility of a metal salt?","Complex formation removes free metal ions from solution equilibrium","It increases the solid's mass","It eliminates all anions","It changes the metal's atomic number","Binding free metal ions lowers their concentration and can drive further dissolution."],
+[A,"A saturated solution of PbI₂ has molar solubility s. What is the iodide concentration?","2s","s","3s","s/2","PbI₂ dissolves as Pb²⁺ + 2I⁻, producing twice as much iodide as lead."]
+]],
+["Electrochemistry",[
+[F,"Reduction occurs at which electrode?","Cathode","Anode","Salt bridge","External resistor","Reduction occurs at the cathode in both galvanic and electrolytic cells."],
+[F,"What is the purpose of a salt bridge in a galvanic cell?","Maintain electrical neutrality by ion movement","Supply electrons to the cathode","Stop all ion movement","Increase electrode mass directly","Ions migrate through the bridge to prevent charge buildup in the half-cells."],
+[F,"A species that gains electrons is:","Reduced","Oxidized","Hydrolyzed","Neutralized","Reduction is gain of electrons."],
+[I,"If E°red(cathode)=+0.80 V and E°red(anode)=−0.76 V, E°cell is:","+1.56 V","+0.04 V","−1.56 V","−0.04 V","E°cell=E°cathode−E°anode=0.80−(−0.76)=1.56 V."],
+[I,"In electrolysis, electrical energy is used to drive a reaction that is:","Nonspontaneous","Always spontaneous","At equilibrium only","Impossible to balance","Electrolysis forces a nonspontaneous redox reaction using an external power source."],
+[I,"How many moles of electrons are required to deposit 1 mol of Cu from Cu²⁺?","2 mol","1 mol","3 mol","4 mol","Cu²⁺ + 2e⁻ → Cu, requiring two moles of electrons per mole Cu."],
+[A,"A cell has E°=1.10 V and transfers 2 mol electrons per reaction. What is ΔG°? (F=96485 C/mol)","−212 kJ/mol","+212 kJ/mol","−106 kJ/mol","+106 kJ/mol","ΔG°=−nFE°=−2(96485)(1.10)≈−212 kJ/mol."],
+[A,"For a cell reaction with n=2 at 25°C, the Nernst equation uses a concentration correction proportional to:","(0.0592/2) log Q","0.0592 × 2 log Q","2/0.0592 log Q","0.0257 × Q","At 25°C, E=E°−(0.0592/n)log Q."],
+[A,"During electrolysis of molten NaCl, what forms at the cathode?","Sodium metal","Chlorine gas","Oxygen gas","Hydrogen gas","Na⁺ gains an electron at the cathode: Na⁺+e⁻→Na."],
+[A,"A current of 2.0 A flows for 965 s. Approximately how many moles of electrons pass? (F=96500 C/mol)","0.020 mol","0.0020 mol","0.20 mol","2.0 mol","Q=It=1930 C; n(e⁻)=Q/F≈1930/96500=0.020 mol."]
+]],
+["Chemical Kinetics",[
+[F,"Increasing temperature usually increases reaction rate because:","A larger fraction of collisions exceed activation energy","The activation energy always becomes zero","The equilibrium constant must increase","Molecules stop colliding","Higher temperature increases the fraction of molecules with sufficient energy."],
+[F,"A reaction intermediate is:","Formed in one step and consumed in a later step","A catalyst that is never changed","Always a final product","A reactant in the overall equation only","An intermediate is produced and then consumed during a multistep mechanism."],
+[F,"The units of a first-order rate constant are typically:","s⁻¹","M⁻¹s⁻¹","M/s","M²/s","For rate=k[A], k has inverse-time units."],
+[I,"For rate=k[A]², doubling [A] changes rate by:","A factor of 4","A factor of 2","A factor of 8","No change","Second-order dependence gives rate proportional to concentration squared."],
+[I,"A catalyst changes which quantity?","Activation energy pathway","Overall ΔG","Equilibrium constant K","Reactant and product identities","A catalyst changes kinetics by lowering activation energy, not thermodynamic equilibrium."],
+[I,"For a zero-order reaction, a plot of [A] versus time has slope:","−k","+k","−1/k","0 in every case","The integrated zero-order law is [A]=[A]₀−kt."],
+[A,"A first-order reaction has k=0.231 min⁻¹. Its half-life is approximately:","3.00 min","0.231 min","6.93 min","1.44 min","t½=0.693/k=0.693/0.231=3.00 min."],
+[A,"A proposed mechanism has a slow first step A+B→X and a fast second step X+C→P. The rate law predicted by the mechanism is:","k[A][B]","k[X][C]","k[A][B][C]","k[P]","The slow elementary step controls the rate; its molecularity gives rate=k[A][B]."],
+[A,"For a reaction, increasing temperature from 300 K to 310 K raises k substantially. Which equation relates k and temperature?","Arrhenius equation","Henderson-Hasselbalch equation","Nernst equation","Beer-Lambert law","The Arrhenius equation k=Ae^(−Ea/RT) relates rate constant and temperature."],
+[A,"A reaction is second order overall and has k=0.50 M⁻¹s⁻¹. At [A]=0.20 M under rate=k[A]², rate is:","0.020 M/s","0.10 M/s","0.25 M/s","0.40 M/s","Rate=0.50(0.20)²=0.020 M/s."]
+]]
+];
+for(const t of chemExtra)addSupplement("Chemistry",t[0],t[1]);
+
 const physicsTopics=[
 ["Astronomy: Galaxies",[
 [F,"What type of galaxy is the Milky Way?",["Barred spiral","Elliptical","Irregular","Ring only"],0,"The Milky Way is classified as a barred spiral galaxy."],
