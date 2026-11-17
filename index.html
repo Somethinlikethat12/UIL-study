@@ -660,6 +660,215 @@ const physicsTopics=[
 ];
 for(const t of physicsTopics)addTopic("Physics",t[0],t[1]);
 
+const physicsExtra=[
+["Astronomy: Galaxies",[
+[F,"What is the approximate shape of the Milky Way's stellar disk?","A flattened disk with spiral structure","A perfect sphere","A cube","A single straight line","The Milky Way is a disk galaxy with a central bulge and spiral arms."],
+[F,"What object lies at the center of the Milky Way?","A supermassive black hole","The Sun","Earth","A neutron star smaller than Earth","Sagittarius A* is the supermassive black hole at the Galactic Center."],
+[F,"Which galaxy is the nearest large spiral galaxy to the Milky Way?","Andromeda Galaxy","Whirlpool Galaxy","Sombrero Galaxy","Triangulum only","The Andromeda Galaxy is the nearest large spiral galaxy and a member of the Local Group."],
+[I,"A galaxy's spectrum is redshifted. What does this generally indicate?","It is receding relative to the observer","It is approaching","It has no stars","Its mass is zero","Redshift indicates wavelengths are stretched, commonly due to recession and cosmic expansion."],
+[I,"Why do spiral arms appear bright in visible images?","They contain many young, luminous stars and star-forming regions","They contain no gas","They are made of solid material","They block all starlight","Spiral arms are regions of enhanced gas density and active star formation."],
+[I,"What does the cosmic microwave background represent?","Relic radiation from the early universe","Light emitted by the Sun","Radio waves from Earth's atmosphere","Radiation from black holes only","The CMB is cooled radiation from the hot early universe."],
+[A,"A galaxy is 100 Mpc away and H₀=70 km/s/Mpc. Approximate recession speed from Hubble's law is:","7000 km/s","70 km/s","0.7 km/s","170 km/s","v=H₀d=70×100=7000 km/s."],
+[A,"A galaxy's rotation curve remains nearly flat far beyond its bright center. The best inference is:","An extended mass distribution, commonly attributed to dark matter","All mass is concentrated in the central black hole","The galaxy is not rotating","Gravity becomes zero outside the visible disk","Flat outer rotation speeds imply substantial gravitating mass beyond visible matter."],
+[A,"Why can gravitational lensing reveal matter that emits little or no light?","Mass curves spacetime and deflects background light","Dark matter emits bright visible lines","Light travels only through matter","Lensing measures temperature directly","Gravitational lensing responds to mass, not whether that mass is luminous."],
+[A,"Two galaxies collide. Why can their stars pass through with relatively few direct stellar collisions?","Stars are separated by enormous distances compared with their sizes","Gravity stops acting during collisions","Stars become transparent","Galaxies contain no stars","The stellar volume filling factor is tiny; gas clouds interact much more directly."]
+]],
+["Measurement & Dimensional Analysis",[
+[F,"Which quantity is a vector?","Displacement","Distance","Mass","Time","Displacement has both magnitude and direction."],
+[F,"What is the SI unit of power?","Watt","Joule","Newton","Coulomb","Power is energy transferred per unit time, measured in watts."],
+[F,"How many seconds are in 2.0 hours?","7200 s","120 s","2000 s","720 s","2.0×3600=7200 s."],
+[I,"A car travels 150 km in 2.0 h. Its average speed is:","75 km/h","300 km/h","148 km/h","0.013 km/h","Average speed=distance/time=150/2.0=75 km/h."],
+[I,"A length is measured as 12.4 cm ±0.2 cm. Approximate percentage uncertainty is:","1.6%","0.2%","6.2%","12.4%","(0.2/12.4)×100≈1.6%."],
+[I,"Which is dimensionally equivalent to energy?","kg·m²/s²","kg·m/s","kg·m/s²","kg/s²","A joule is N·m=(kg·m/s²)m=kg·m²/s²."],
+[A,"If x=vt+½at², which unit must a have for dimensional consistency?","m/s²","m/s","m²/s","1/s","The term at² must have units of length, so a has units m/s²."],
+[A,"A measured quantity is 5.0±0.2 and another is 2.0±0.1. For their product, approximate maximum percentage uncertainty is:","9%","4%","5%","0.3%","Relative uncertainties add: 0.2/5.0=4% and 0.1/2.0=5%, total 9%."],
+[A,"A quantity scales as r³. If r increases by 10%, the quantity increases by approximately:","33.1%","10%","30% exactly","21%","The exact ratio is 1.1³=1.331, a 33.1% increase."],
+[A,"A graph has a curved trend but becomes a straight line when plotting y against 1/x. This suggests y is proportional to:","1/x","x²","x","ln x","A straight line in y versus 1/x indicates inverse proportionality."]
+]],
+["Kinematics",[
+[F,"An object moving at constant velocity has acceleration:","Zero","Constant positive","Constant negative","Increasing","Acceleration is the rate of change of velocity; constant velocity means zero acceleration."],
+[F,"A car slows from 20 m/s to 10 m/s in 5 s. Its average acceleration is:","−2 m/s²","+2 m/s²","−6 m/s²","+6 m/s²","a=(10−20)/5=−2 m/s²."],
+[F,"The area under a velocity-time graph gives:","Displacement","Acceleration","Jerk","Force","Integrating velocity over time gives displacement."],
+[I,"A stone is dropped from rest. Neglecting air resistance, its speed after 3 s is approximately:","29.4 m/s","9.8 m/s","14.7 m/s","88.2 m/s","v=gt=9.8×3=29.4 m/s."],
+[I,"A car traveling 15 m/s brakes with acceleration −3 m/s². How long to stop?","5 s","3 s","12 s","45 s","0=15−3t, so t=5 s."],
+[I,"A projectile is launched horizontally at 12 m/s from a 20 m cliff. Approximate flight time is:","2.02 s","1.02 s","4.08 s","12 s","t=√(2h/g)=√(40/9.8)≈2.02 s."],
+[A,"A body starts at x=0 with v₀=4 m/s and a=−2 m/s². Its position at t=3 s is:","3 m","6 m","−3 m","−6 m","x=v₀t+½at²=12−9=3 m."],
+[A,"A projectile is launched at 20 m/s at 30° above horizontal. Its initial vertical velocity is:","10 m/s","17.3 m/s","20 m/s","5 m/s","vᵧ=v sin30°=20×0.5=10 m/s."],
+[A,"An object moves with velocity v=3t². What is its acceleration at t=2 s?","12 m/s²","6 m/s²","3 m/s²","24 m/s²","Acceleration is dv/dt=6t; at t=2, a=12 m/s²."],
+[A,"A car travels half a journey at 30 m/s and the other half at 60 m/s. Its average speed is:","40 m/s","45 m/s","30 m/s","50 m/s","For equal distances, average speed is harmonic mean: 2(30)(60)/(30+60)=40 m/s."]
+]],
+["Forces & Newton's Laws",[
+[F,"If the net force on an object is zero, its acceleration is:","Zero","Constant and positive","Equal to its mass","Infinite","Newton's second law gives a=Fnet/m."],
+[F,"A 2 kg object has a net force of 10 N. Its acceleration is:","5 m/s²","20 m/s²","0.2 m/s²","12 m/s²","a=F/m=10/2=5 m/s²."],
+[F,"Newton's third-law force pairs act on:","Different objects","The same object","Only objects at rest","Only objects with equal masses","Action-reaction forces are equal and opposite and act on different bodies."],
+[I,"A 10 kg block rests on a horizontal surface. Its normal force is approximately:","98 N","10 N","9.8 N","0 N","With no vertical acceleration and no other vertical forces, N=mg=98 N."],
+[I,"A 5 kg block has μk=0.20 on a level surface. Kinetic friction is approximately:","9.8 N","49 N","1.0 N","0.98 N","fk=μkN=0.20(5×9.8)=9.8 N."],
+[I,"A 1000 kg car rounds a flat curve at constant speed. The centripetal force is supplied by:","Static friction","Gravity alone","The normal force alone","The engine's forward force","On a flat road, static friction provides the inward centripetal force."],
+[A,"A 4 kg block is pulled by 30 N horizontally; friction is 10 N. Its acceleration is:","5 m/s²","10 m/s²","7.5 m/s²","2.5 m/s²","Net force=20 N; a=20/4=5 m/s²."],
+[A,"Two masses 3 kg and 2 kg are connected over a frictionless pulley. Approximate acceleration is:","1.96 m/s²","9.8 m/s²","4.9 m/s²","0.98 m/s²","a=(3−2)g/(3+2)=9.8/5=1.96 m/s²."],
+[A,"A 60 kg person stands in an elevator accelerating upward at 2 m/s². Apparent weight is:","708 N","588 N","468 N","120 N","N=m(g+a)=60(9.8+2)=708 N."],
+[A,"A car travels around a curve of radius r. If speed doubles, required centripetal force becomes:","Four times as large","Twice as large","Half as large","Unchanged","Fc=mv²/r, so doubling speed quadruples the force."]
+]],
+["Work, Energy & Momentum",[
+[F,"If a force is perpendicular to displacement, the work it does is:","Zero","Maximum","Negative always","Equal to force","W=Fd cosθ; cos90°=0."],
+[F,"The SI unit of momentum is:","kg·m/s","Joule","Newton","Watt","Momentum p=mv has units kg·m/s."],
+[F,"If speed doubles, kinetic energy becomes:","Four times as large","Twice as large","Half as large","Unchanged","K=½mv², so doubling v quadruples kinetic energy."],
+[I,"A 3 kg object is lifted 4 m. Its gravitational potential energy gain is approximately:","118 J","12 J","29 J","39 J","ΔU=mgh=3×9.8×4=117.6 J."],
+[I,"A 0.5 kg ball changes velocity from +8 m/s to −4 m/s. Magnitude of momentum change is:","6 kg·m/s","2 kg·m/s","4 kg·m/s","12 kg·m/s","Δp=m(vf−vi)=0.5(−4−8)=−6 kg·m/s; magnitude 6."],
+[I,"A 2 kg object moving at 5 m/s stops in 0.5 s. Average force magnitude is:","20 N","10 N","5 N","2 N","Impulse Δp=10 kg·m/s; Favg=Δp/Δt=20 N."],
+[A,"A 2 kg mass moving at 6 m/s collides elastically head-on with an identical mass at rest. The first mass's final speed is:","0 m/s","3 m/s","6 m/s","12 m/s","In a one-dimensional elastic collision of equal masses, velocities are exchanged."],
+[A,"A 1000 kg car moving at 20 m/s is stopped over 50 m. Average braking force magnitude is:","4000 N","2000 N","8000 N","1000 N","Work-energy: Fd=½mv²; F=0.5(1000)(400)/50=4000 N."],
+[A,"A 5 kg object falls 10 m from rest with no air resistance. Its speed just before impact is:","14.0 m/s","9.8 m/s","19.6 m/s","98 m/s","mgh=½mv², so v=√(2gh)=√196=14 m/s."],
+[A,"A 4 kg cart moving at 3 m/s sticks to a 2 kg cart moving at −3 m/s. Final velocity is:","1 m/s","0 m/s","2 m/s","−1 m/s","Momentum total=12−6=6; total mass=6 kg, so vf=1 m/s."]
+]],
+["Circular & Rotational Motion",[
+[F,"Angular displacement is commonly measured in:","Radians","Newtons","Joules","Meters per second","Radians are the standard SI-compatible angular measure."],
+[F,"The direction of angular velocity is given by:","Right-hand rule","Left-hand rule only","Lenz's law","Snell's law","Curl the right-hand fingers in the rotation direction; thumb gives angular-velocity direction."],
+[F,"For uniform circular motion, speed can be constant while velocity changes because:","Direction changes continuously","Mass changes","Acceleration is zero","Radius must change","Velocity is a vector; changing direction means changing velocity."],
+[I,"A wheel rotates at 10 rad/s with radius 0.5 m. Rim speed is:","5 m/s","20 m/s","10.5 m/s","0.05 m/s","v=ωr=10×0.5=5 m/s."],
+[I,"A torque of 12 N·m acts on a body with moment of inertia 3 kg·m². Angular acceleration is:","4 rad/s²","36 rad/s²","9 rad/s²","0.25 rad/s²","τ=Iα, so α=12/3=4 rad/s²."],
+[I,"A 2 m lever arm has a 10 N perpendicular force. Torque is:","20 N·m","5 N·m","12 N·m","0.2 N·m","τ=rF=2×10=20 N·m."],
+[A,"A solid disk and a hoop roll without slipping down the same incline from rest. Which reaches the bottom first?","Solid disk","Hoop","They tie","It depends only on mass","The disk has lower rotational inertia relative to mr², so more energy goes into translation."],
+[A,"A rotating system has I=2 kg·m² and ω=5 rad/s. Its angular momentum is:","10 kg·m²/s","2.5 kg·m²/s","7 kg·m²/s","25 kg·m²/s","L=Iω=2×5=10 kg·m²/s."],
+[A,"A skater pulls arms inward, reducing moment of inertia to half. With negligible external torque, angular speed:","Doubles","Halves","Quadruples","Stays constant","Angular momentum Iω is conserved; halving I doubles ω."],
+[A,"A 4 m uniform beam is pivoted at its center. A 10 N downward force acts 1 m to the right of pivot. Torque magnitude is:","10 N·m","40 N·m","5 N·m","0 N·m","τ=F r⊥=10×1=10 N·m."]
+]],
+["Oscillations & Waves",[
+[F,"Frequency is measured in:","Hertz","Meters","Seconds per meter","Joules","One hertz equals one cycle per second."],
+[F,"A wave travels at 20 m/s and has wavelength 4 m. Its frequency is:","5 Hz","80 Hz","0.2 Hz","24 Hz","v=fλ, so f=20/4=5 Hz."],
+[F,"In a transverse wave, particles oscillate:","Perpendicular to wave travel","Parallel to wave travel","In circles only","Not at all","Transverse oscillations are perpendicular to propagation."],
+[I,"A spring-mass oscillator has m=1 kg and k=100 N/m. Its period is approximately:","0.63 s","6.28 s","0.10 s","1.00 s","T=2π√(m/k)=2π√0.01≈0.628 s."],
+[I,"Two coherent waves arrive in phase. Their interference is:","Constructive","Destructive","Always zero","Random","In-phase waves add amplitudes constructively."],
+[I,"Sound intensity falls with distance from a point source approximately as:","1/r²","1/r","r²","Constant","For spherical spreading, intensity is proportional to inverse square of distance."],
+[A,"A 500 Hz source approaches a stationary observer at 20 m/s. With sound speed 340 m/s, observed frequency is approximately:","531 Hz","471 Hz","500 Hz","560 Hz","For an approaching source, f'=f v/(v−vs)=500(340/320)≈531 Hz."],
+[A,"A string of length L is fixed at both ends. The second harmonic has wavelength:","L","2L","L/2","4L","For harmonic n, λn=2L/n; at n=2, λ=L."],
+[A,"A damped oscillator's amplitude decreases because:","Mechanical energy is dissipated","Its mass increases","Its equilibrium point accelerates","Frequency must become zero instantly","Damping converts mechanical energy into other forms, commonly heat."],
+[A,"A resonance occurs when a driving frequency is near the system's:","Natural frequency","Mass in kilograms","Maximum displacement only","Damping coefficient alone","Driving near natural frequency produces a large response, depending on damping."]
+]],
+["Thermodynamics",[
+[F,"Temperature is most directly related to the average:","Random kinetic energy of particles","Potential energy of a whole object","Mass of particles","Number of atoms only","Temperature measures average translational kinetic energy for an ideal gas."],
+[F,"Which heat-transfer process can occur through a vacuum?","Radiation","Conduction","Convection","All require matter","Electromagnetic radiation transfers energy without a material medium."],
+[F,"The second law of thermodynamics states that total entropy of an isolated system:","Never decreases","Always decreases","Is always zero","Equals its temperature","The entropy of an isolated system does not decrease in spontaneous processes."],
+[I,"A 2 kg object with c=500 J/(kg·K) warms by 4 K. Heat absorbed is:","4000 J","1000 J","250 J","8000 J","q=mcΔT=2×500×4=4000 J."],
+[I,"During an isothermal expansion of an ideal gas, its internal energy change is:","Zero","Positive","Negative","Equal to pressure","Ideal-gas internal energy depends only on temperature."],
+[I,"A refrigerator transfers heat from cold to hot using:","Work input","No energy input","Only spontaneous heat flow","Gravity alone","A refrigerator requires work to move heat against its natural direction."],
+[A,"One mole of ideal gas expands isothermally and reversibly from V to 2V at 300 K. Work done by the gas is approximately:","1.73 kJ","0.693 kJ","2.49 kJ","3.46 kJ","W=nRT ln(Vf/Vi)=8.314×300×ln2≈1.73 kJ."],
+[A,"A Carnot engine operates between 500 K and 300 K. Its maximum efficiency is:","40%","60%","20%","80%","η=1−Tc/Th=1−300/500=0.40."],
+[A,"An ideal gas undergoes an adiabatic expansion. Its temperature generally:","Decreases","Increases","Remains constant","Becomes infinite","The gas does work without heat entering, reducing internal energy and temperature."],
+[A,"A heat engine absorbs 2000 J and rejects 1200 J each cycle. Its work output is:","800 J","1200 J","2000 J","3200 J","Energy conservation gives W=Qh−Qc=800 J."]
+]],
+["DC Circuits",[
+[F,"In a series circuit, the current through each resistor is:","The same","Different in every resistor","Always zero","Proportional to resistance","A single path means the same current passes through each series element."],
+[F,"In a parallel circuit, the voltage across each branch is:","The same","Divided in proportion to resistance","Always zero","Different for every branch","Parallel branches share the same two nodes and therefore the same potential difference."],
+[F,"Electrical power can be calculated using:","P=IV","P=I/V","P=V+I","P=R/I","Power is voltage times current."],
+[I,"A 12 Ω resistor carries 0.5 A. Voltage across it is:","6 V","24 V","12.5 V","0.042 V","V=IR=12×0.5=6 V."],
+[I,"Three 2 Ω resistors are connected in parallel. Equivalent resistance is:","0.667 Ω","6 Ω","2 Ω","1.5 Ω","1/Req=1/2+1/2+1/2=3/2, so Req=2/3 Ω."],
+[I,"A 100 W bulb operates for 2 hours. Energy used is:","0.20 kWh","200 kWh","50 kWh","2 kWh","100 W=0.1 kW; energy=0.1×2=0.20 kWh."],
+[A,"A 6 μF capacitor and 3 μF capacitor are connected in parallel. Equivalent capacitance is:","9 μF","2 μF","18 μF","0.5 μF","Parallel capacitances add: 6+3=9 μF."],
+[A,"A 6 μF capacitor and 3 μF capacitor are connected in series. Equivalent capacitance is:","2 μF","9 μF","18 μF","3 μF","1/Ceq=1/6+1/3=1/2, so Ceq=2 μF."],
+[A,"A 10 μF capacitor is charged to 12 V. Stored energy is:","0.72 mJ","7.2 mJ","72 mJ","0.006 J","U=½CV²=0.5(10×10⁻⁶)(144)=0.00072 J=0.72 mJ."],
+[A,"In an RC charging circuit, after one time constant τ=RC, the capacitor voltage reaches approximately:","63% of its final value","37% of its final value","50% of its final value","100% of its final value","Vc=V(1−e⁻¹)≈0.632V after one time constant."]
+]],
+["Electric Fields & Potential",[
+[F,"Electric field is defined as force per unit:","Positive test charge","Mass","Current","Distance","E=F/q for a positive test charge."],
+[F,"The electric potential energy of two like charges is:","Positive","Negative","Always zero","Infinite only","Like charges require positive work to bring together from infinity, giving positive potential energy."],
+[F,"Equipotential surfaces are always:","Perpendicular to electric field lines","Parallel to field lines","Randomly oriented","Inside conductors only","The field points in the direction of greatest potential decrease, perpendicular to equipotentials."],
+[I,"A 2 C charge experiences a 10 N force. Electric field magnitude is:","5 N/C","20 N/C","12 N/C","0.2 N/C","E=F/q=10/2=5 N/C."],
+[I,"The electric potential 2 m from a +4 μC point charge is approximately:","18,000 V","9,000 V","36,000 V","72,000 V","V=kq/r=(9×10⁹)(4×10⁻⁶)/2=18,000 V."],
+[I,"How much work is required to move 3 C through a potential difference of 5 V?","15 J","8 J","1.67 J","30 J","W=qΔV=3×5=15 J."],
+[A,"A point charge's electric field is 36 N/C at 2 m. At 6 m, it is:","4 N/C","12 N/C","9 N/C","1 N/C","E∝1/r²; increasing distance by 3 reduces field by 9: 36/9=4 N/C."],
+[A,"A uniform electric field of 200 N/C points right. A −2 μC charge experiences force:","4×10⁻⁴ N left","4×10⁻⁴ N right","100 N left","0 N","F=qE; magnitude 2×10⁻⁶×200=4×10⁻⁴ N, opposite the field for negative charge."],
+[A,"For a charged conducting sphere in electrostatic equilibrium, the electric field inside the conducting material is:","Zero","Uniform and nonzero","Infinite","Radially inward","Free charges redistribute until the internal electric field is zero."],
+[A,"Gauss's law relates electric flux through a closed surface to:","Net enclosed charge divided by ε₀","Total surface area only","Potential at infinity","Magnetic flux","∮E·dA=Qenc/ε₀."]
+]],
+["Magnetism",[
+[F,"A magnetic field exerts force on a charge only if the charge is:","Moving with a velocity not parallel to the field","Stationary","Neutral","At rest in every frame","Magnetic force magnitude is |q|vB sinθ."],
+[F,"The north pole of a compass points approximately toward Earth's:","Magnetic south pole near the geographic North Pole","Magnetic north pole near the geographic South Pole","Equator","Core center only","Opposite magnetic poles attract; Earth's field near geographic north behaves like a magnetic south pole."],
+[F,"Magnetic field lines around a bar magnet outside the magnet run from:","North to south","South to north","East to west","Center outward equally","Outside a magnet, field lines emerge from north and enter south."],
+[I,"A 0.5 C charge moves at 4 m/s perpendicular to a 2 T field. Magnetic force is:","4 N","1 N","8 N","0 N","F=qvB=0.5×4×2=4 N."],
+[I,"A wire of length 0.2 m carries 3 A perpendicular to a 5 T field. Force is:","3 N","0.3 N","15 N","0.03 N","F=ILB=3×0.2×5=3 N."],
+[I,"The magnetic field around a long straight current-carrying wire increases when:","Current increases","Distance from wire increases","Current decreases","Wire is made longer but current fixed","B=μ₀I/(2πr), so field is proportional to current."],
+[A,"A charged particle moves perpendicular to a uniform magnetic field. If its speed doubles, its circular orbit radius:","Doubles","Halves","Quadruples","Stays unchanged","r=mv/(|q|B), proportional to speed."],
+[A,"Two parallel wires carry currents in the same direction. They:","Attract","Repel","Exert no force","Rotate around each other","Parallel currents in the same direction attract."],
+[A,"A proton and an electron enter the same uniform magnetic field with equal speeds perpendicular to it. Which has the larger orbit radius?","Proton","Electron","Same radius","Neither curves","r=mv/(|q|B); proton mass is much greater, so its radius is larger."],
+[A,"A magnetic material loses its permanent magnetization above its Curie temperature because:","Thermal agitation disrupts magnetic domain alignment","Its atoms lose all electrons","Its nuclei become nonmagnetic","The field becomes infinite","Above the Curie temperature, thermal motion destroys long-range ferromagnetic order."]
+]],
+["Electromagnetic Induction & AC",[
+[F,"An induced current requires a change in:","Magnetic flux","Electric resistance only","Mass","Temperature only","Faraday's law relates induced emf to the rate of change of magnetic flux."],
+[F,"Alternating current periodically:","Reverses direction","Flows in one direction only","Has zero voltage always","Stops permanently","AC changes direction periodically."],
+[F,"A generator converts:","Mechanical energy to electrical energy","Electrical energy to chemical energy","Heat directly to mass","Light to nuclear energy","Electromagnetic induction converts mechanical work into electrical energy."],
+[I,"A coil has 100 turns and magnetic flux changes by 0.02 Wb in 0.1 s. Induced emf magnitude is:","20 V","2 V","0.2 V","200 V","|ε|=N|ΔΦ/Δt|=100(0.02/0.1)=20 V."],
+[I,"A transformer has 200 primary turns and 50 secondary turns. If primary voltage is 120 V, secondary voltage is:","30 V","480 V","120 V","60 V","Vs/Vp=Ns/Np=50/200=0.25, so Vs=30 V."],
+[I,"In an ideal transformer, if voltage is stepped up by a factor of 4, current is:","Reduced to one-fourth","Increased by four","Unchanged","Reduced to one-sixteenth","Ideal power is conserved, so current decreases inversely with voltage."],
+[A,"A sinusoidal AC source has peak voltage 170 V. Its rms voltage is approximately:","120 V","170 V","240 V","85 V","Vrms=Vpeak/√2≈170/1.414≈120 V."],
+[A,"A 60 Hz AC source has angular frequency approximately:","377 rad/s","60 rad/s","120 rad/s","30 rad/s","ω=2πf=2π(60)≈377 rad/s."],
+[A,"Lenz's law is a consequence of conservation of:","Energy","Charge only","Mass only","Angular momentum only","The induced current opposes the flux change, preventing energy from being created without work."],
+[A,"At resonance in a series RLC circuit, the inductive and capacitive reactances:","Are equal in magnitude","Are both zero","Are both infinite","Add to maximize impedance","At resonance XL=XC, so net reactance is zero and impedance is purely resistive."]
+]],
+["Optics",[
+[F,"A concave mirror is generally:","Converging","Diverging","A plane mirror","A polarizer only","A concave mirror reflects parallel rays toward a focal point."],
+[F,"The speed of light is greatest in:","Vacuum","Water","Glass","Diamond","Light travels fastest in vacuum."],
+[F,"A ray enters a medium with a higher refractive index. It bends:","Toward the normal","Away from the normal","Along the interface","Back toward the source always","Snell's law gives a smaller refracted angle when entering a higher-index medium."],
+[I,"A lens has focal length 0.20 m. Its optical power is:","+5 diopters","+0.20 diopters","−5 diopters","−0.20 diopters","P=1/f with f in meters, so P=1/0.20=5 D."],
+[I,"An object is 30 cm from a converging lens with focal length 10 cm. Image distance is:","15 cm","10 cm","30 cm","−15 cm","1/f=1/do+1/di; 1/10=1/30+1/di, giving di=15 cm."],
+[I,"Total internal reflection occurs when light travels:","From higher to lower refractive index above the critical angle","From lower to higher index at any angle","Through a vacuum only","At normal incidence","Total internal reflection requires n1>n2 and incidence angle above critical."],
+[A,"An object is 20 cm from a concave mirror with focal length 10 cm. The image is:","Real, inverted, and 20 cm from the mirror","Virtual and upright at 10 cm","Real and enlarged at infinity","Virtual and reduced","At 2f, a concave mirror forms a real inverted image at 2f with equal size."],
+[A,"In Young's double-slit experiment, fringe spacing increases when:","Wavelength increases","Slit separation increases","Screen distance decreases","Wavelength decreases","Δy=λL/d, so larger wavelength increases fringe spacing."],
+[A,"An unpolarized beam passes through an ideal polarizer. Its transmitted intensity is:","Half the initial intensity","Equal to initial intensity","Zero","Twice the initial intensity","An ideal polarizer transmits half the intensity of unpolarized light."],
+[A,"A diffraction grating has more lines per millimeter. For a fixed wavelength and order, the diffraction angle generally:","Increases","Decreases","Is unchanged","Becomes zero","Smaller grating spacing d requires larger sinθ=mλ/d."]
+]],
+["Modern & Quantum Physics",[
+[F,"The energy of a photon increases when its:","Frequency increases","Wavelength increases","Speed in vacuum increases","Amplitude alone increases","E=hf; photon energy is proportional to frequency."],
+[F,"Which phenomenon demonstrates that particles can behave as waves?","Electron diffraction","Classical reflection only","Radioactive half-life","Static friction","Electron diffraction produces wave-like interference patterns."],
+[F,"A photon with twice the frequency has:","Twice the energy","Half the energy","Four times the energy","The same energy","Photon energy is directly proportional to frequency."],
+[I,"Light has wavelength 600 nm. Its photon energy is approximately:","3.3×10⁻¹⁹ J","6.0×10⁻⁷ J","1.2×10⁻¹⁹ J","9.0×10⁻²⁶ J","E=hc/λ≈(6.63×10⁻³⁴)(3.00×10⁸)/(600×10⁻⁹)=3.3×10⁻¹⁹ J."],
+[I,"If a particle's momentum doubles, its de Broglie wavelength:","Halves","Doubles","Quadruples","Is unchanged","λ=h/p, so doubling momentum halves wavelength."],
+[I,"In the photoelectric effect, increasing light frequency above threshold increases the maximum kinetic energy because:","Each photon carries more energy","There are more photons at the same intensity","The metal's work function falls to zero","Electrons gain energy from gravity","Kmax=hf−φ, so higher frequency raises the maximum electron kinetic energy."],
+[A,"An electron is accelerated through 150 V. Its gained kinetic energy is:","150 eV","1 eV","300 eV","0.5 eV","A charge of magnitude e moving through 150 V gains 150 eV."],
+[A,"If position uncertainty decreases, the minimum momentum uncertainty:","Increases","Decreases","Becomes zero","Is unchanged","Heisenberg's relation ΔxΔp≥ℏ/2 requires larger momentum uncertainty for smaller position uncertainty."],
+[A,"A quantum system is in a superposition of two energy eigenstates. Before measurement, the state is:","A linear combination of both states","Definitely one state with no uncertainty","A classical mixture in every interpretation","Not physically meaningful","A superposition is a coherent linear combination of allowed states."],
+[A,"A quantum computer's qubit differs from a classical bit because it can:","Be in a superposition of basis states","Store only 0 or 1 at all times","Copy unknown quantum states perfectly","Avoid measurement outcomes","A qubit can occupy a superposition, though measurement yields a definite outcome."]
+]],
+["Nuclear & Particle Physics",[
+[F,"The atomic number of a nucleus is its number of:","Protons","Neutrons","Protons plus neutrons","Electrons plus neutrons","Atomic number Z equals proton number."],
+[F,"Gamma radiation is composed of:","High-energy photons","Helium nuclei","Electrons","Neutrons","Gamma rays are electromagnetic radiation."],
+[F,"An isotope differs from another isotope of the same element in its number of:","Neutrons","Protons","Electrons in a neutral atom","Nuclear charges","Isotopes share proton number but have different neutron numbers."],
+[I,"In alpha decay, the mass number changes by:","−4","−2","+4","0","An alpha particle contains two protons and two neutrons, reducing mass number by four."],
+[I,"A radioactive sample has a half-life of 5 days. What fraction remains after 15 days?","1/8","1/2","1/4","1/16","Three half-lives pass, leaving (1/2)³=1/8."],
+[I,"Which interaction holds protons and neutrons together in nuclei?","Strong nuclear interaction","Gravitational interaction","Friction","Electromagnetic repulsion only","The strong interaction binds nucleons at short range."],
+[A,"A nucleus has mass defect 0.020 u. Approximate binding energy is:","18.6 MeV","0.020 MeV","931 MeV","9.31 MeV","1 u corresponds to about 931.5 MeV; 0.020×931.5≈18.6 MeV."],
+[A,"A sample's activity falls from 800 Bq to 100 Bq. How many half-lives have elapsed?","3","2","4","8","800→400→200→100 is three half-lives."],
+[A,"In beta-plus decay, a proton changes into:","A neutron, positron, and neutrino","A neutron and electron","Two protons","An alpha particle","In β⁺ decay, p→n+e⁺+νe."],
+[A,"Why does nuclear fission of a heavy nucleus release energy?","Products have greater binding energy per nucleon","The products have less total charge","Mass is created from nothing","The strong force disappears","Fission products are more tightly bound; the mass difference is released as energy."]
+]],
+["Experimental/Lab Analysis I",[
+[F,"A control variable is one that is:","Kept constant","Deliberately changed","Measured as the outcome","Always ignored","Control variables are held constant to isolate the effect of the independent variable."],
+[F,"The slope of a force-versus-acceleration graph is mass. This follows from:","F=ma","p=mv","W=Fd","V=IR","F=ma can be written F=m·a, so slope is m."],
+[F,"Which graph best shows constant acceleration?","Velocity versus time is a straight sloped line","Position versus time is always horizontal","Acceleration versus time is curved randomly","Speed versus distance is always vertical","Constant acceleration produces a linear velocity-time graph with constant slope."],
+[I,"A velocity-time graph rises from 0 to 12 m/s over 4 s. Acceleration is:","3 m/s²","48 m/s²","0.33 m/s²","12 m/s²","Slope=(12−0)/4=3 m/s²."],
+[I,"A force-time graph has a triangular pulse with height 10 N and base 0.2 s. Impulse is:","1.0 N·s","2.0 N·s","0.1 N·s","10 N·s","Impulse is area under the curve: ½(0.2)(10)=1.0 N·s."],
+[I,"Why should an experiment use multiple measurements at each setting?","To estimate random uncertainty and identify outliers","To guarantee a desired conclusion","To eliminate systematic error","To change the hypothesis","Repeated measurements characterize variability and improve estimates."],
+[A,"A position-time graph is concave upward. What does this indicate about acceleration?","Positive acceleration","Negative acceleration","Zero acceleration","Constant position","Concave upward position versus time indicates positive second derivative, hence positive acceleration."],
+[A,"A best-fit line is y=2.5x+4. The y-intercept represents:","Predicted y when x=0","The slope","The largest measured x","The residual mean always","At x=0, y=4; the intercept is the model's predicted initial value."],
+[A,"An experiment's residuals are positive at low x and negative at high x in a linear fit. This suggests:","A systematic curved pattern the linear model misses","A perfect linear model","No measurement error","The slope must be zero","Structured residuals indicate model inadequacy, such as curvature."],
+[A,"A measured acceleration is 9.2 m/s² while the accepted value is 9.8 m/s². Percent error is approximately:","6.1%","0.6%","9.2%","15%","|9.2−9.8|/9.8×100≈6.1%."]
+]],
+["Experimental/Lab Analysis II",[
+[F,"A voltmeter should be connected:","In parallel with the component","In series with the component","Across the battery only in every setup","Without completing the circuit","A voltmeter measures potential difference across a component."],
+[F,"An ammeter should have:","Very low resistance","Very high resistance","Infinite resistance","A resistance equal to the load","Ammeter resistance should be low to avoid changing circuit current."],
+[F,"A graph of charge versus time has slope equal to:","Current","Voltage","Resistance","Power","Current is I=dQ/dt, the slope of charge-time data."],
+[I,"A 12 V source produces 0.40 A through a component. Its resistance is:","30 Ω","4.8 Ω","12.4 Ω","0.033 Ω","R=V/I=12/0.40=30 Ω."],
+[I,"A capacitor voltage falls to 37% of its initial value after 2 s of discharge. The time constant is:","2 s","0.74 s","5.4 s","1 s","For discharge V=V₀e^(−t/τ); at t=τ, voltage is about 37%."],
+[I,"A graph of ln(V) versus time for a discharging capacitor has slope:","−1/RC","+RC","−RC","1/R","V=V₀e^(−t/RC), so lnV=lnV₀−t/RC."],
+[A,"A resistor's I-V data are (2 V, 0.1 A) and (6 V, 0.3 A). Its resistance is:","20 Ω","2 Ω","0.2 Ω","60 Ω","R=V/I=2/0.1=20 Ω; the second point gives the same ratio."],
+[A,"A circuit's measured current is lower than predicted by an ideal model. Which experimental factor could explain this?","Internal resistance of the source","A perfect zero-resistance wire","A larger-than-modeled source voltage","No resistance anywhere","Real batteries have internal resistance that reduces terminal voltage under load."],
+[A,"A graph of 1/f versus time is linear with slope 0.5 s⁻¹. Which conclusion is justified?","The plotted variables have a linear relationship with that slope","Frequency is constant at 0.5 Hz","The intercept must be zero","The data prove causation","The fitted slope describes the chosen axes; it does not by itself establish causation."],
+[A,"A sensor reads 2.0 units too high at every calibration point. This is primarily:","Systematic offset error","Random error","Resolution improvement","A proportional scale error only","A constant additive bias is a systematic offset."]
+]]
+];
+for(const t of physicsExtra)addSupplement("Physics",t[0],t[1]);
+
+
 /* 2026-27 directed-reading practice: original questions organized by the
    published chapter themes. These are study questions, not quotations. */
 const BOOK_Q = [
