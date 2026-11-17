@@ -993,7 +993,7 @@ const BOOK_Q = [
 ]]
 ];
 const BOOK_CHAPTERS = BOOK_Q.map((chapter,i)=>({n:chapter[0],questions:chapter[1]}));
-for (const chapter of BOOK_CHAPTERS) for (const item of chapter.questions) Q.push(["Quantum Supremacy",item[1],item[0]+" — "+chapter[0]+": "+item[2],item[3],item[4],item[5],chapter[0]]);
+for (const chapter of BOOK_CHAPTERS) for (const item of chapter.questions) Q.push(["Quantum Supremacy",item[1],chapter[0]+" — "+item[0],item[2],item[3],item[4],chapter[0]]);
 
 /* Rotate answer choices deterministically so the correct letter is not predictable.
    The original correct-answer index is adjusted with each rotation. */
