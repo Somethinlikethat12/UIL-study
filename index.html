@@ -484,7 +484,7 @@ const chemExtra=[
 [I,"For N₂ + 3H₂ ⇌ 2NH₃, increasing pressure by decreasing volume shifts equilibrium toward:","NH₃","N₂ and H₂","Neither side","More gas moles","The product side has fewer gas moles (2 versus 4), so compression favors products."],
 [I,"If Q<K, the reaction proceeds net in which direction to reach equilibrium?","Forward, toward products","Reverse, toward reactants","It is already at equilibrium","It stops permanently","Q<K means the product-to-reactant ratio is below its equilibrium value."],
 [I,"For an exothermic forward reaction, increasing temperature shifts equilibrium:","Toward reactants","Toward products","Nowhere","Only if a catalyst is present","Heat acts like a product in an exothermic reaction, so added heat favors the reverse direction."],
-[A,"For A ⇌ 2B, initially [A]=1.0 M and [B]=0. At equilibrium [B]=0.60 M. What is Kc?","0.90","0.60","1.8","0.30","If 2x=0.60, x=0.30; [A]=0.70 M, so Kc=[B]²/[A]=0.36/0.70≈0.514. Wait: the correct value is 0.514, not listed.","]
+[A,"For A ⇌ 2B, initially [A]=1.0 M and [B]=0. At equilibrium [B]=0.60 M. What is Kc?","0.514","0.90","0.30","1.8","If 2x=0.60, x=0.30; [A]=0.70 M, so Kc=[B]²/[A]=0.36/0.70≈0.514."],
 ]],
 ["Acids & Bases",[
 [F,"A Brønsted-Lowry acid is a proton:","Donor","Acceptor","Electron donor only","Neutron donor","A Brønsted-Lowry acid donates H⁺."],
@@ -994,6 +994,15 @@ const BOOK_Q = [
 ];
 const BOOK_CHAPTERS = BOOK_Q.map((chapter,i)=>({n:chapter[0],questions:chapter[1]}));
 for (const chapter of BOOK_CHAPTERS) for (const item of chapter.questions) Q.push(["Quantum Supremacy",item[1],item[0]+" — "+chapter[0]+": "+item[2],item[3],item[4],item[5],chapter[0]]);
+
+/* Rotate answer choices deterministically so the correct letter is not predictable.
+   The original correct-answer index is adjusted with each rotation. */
+for(let i=0;i<Q.length;i++){
+ const q=Q[i], opts=q[3], shift=(i*3+1)%opts.length;
+ q[3]=opts.map((_,j)=>opts[(j+shift)%opts.length]);
+ q[4]=(q[4]-shift+opts.length)%opts.length;
+}
+
 
 const formulas=[['Density','ρ = m / V','Mass divided by volume. Common units: g/mL, g/cm³.'],['Speed','v = d / t','Distance divided by elapsed time. Common units: m/s.'],['Acceleration','a = Δv / Δt','Change in velocity divided by time. Units: m/s².'],['Newton’s second law','F = ma','Net force equals mass times acceleration. Units: newtons.'],['Work','W = Fd','For a constant force parallel to displacement. Units: joules.'],['Kinetic energy','KE = ½mv²','Translational kinetic energy. Units: joules.'],['Moles','n = m / M','Mass divided by molar mass. Units: mol, g, g/mol.'],['Particles','N = n × 6.022 × 10²³','Avogadro’s constant per mole.'],['Heat','q = mcΔT','For temperature change without a phase change.'],['Wave speed','v = fλ','Frequency times wavelength.'],['Ohm’s law','V = IR','Voltage equals current times resistance.'],['Percent error','|experimental − accepted| / |accepted| × 100%','Use consistent units.']];
 const KEY='uilScienceLab2';let data=load(),run=null;
